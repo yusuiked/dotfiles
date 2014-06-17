@@ -1,0 +1,10 @@
+# Run `brew bundle Caskfile`
+
+# Add Repository
+# for Homebrew Cask
+tap caskroom/cask
+# Install Cask
+install brew-cask
+
+# Packages for brew-cask
+cask install google-chrome
