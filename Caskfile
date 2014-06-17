@@ -9,3 +9,4 @@ install brew-cask
 # Packages for brew-cask
 cask install appcleaner
 cask install google-chrome
+cask install alfred
