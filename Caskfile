@@ -11,3 +11,4 @@ cask install appcleaner
 cask install google-chrome
 cask install alfred
 cask install the-unarchiver
+cask install google-japanese-ime
