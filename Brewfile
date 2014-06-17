@@ -9,6 +9,8 @@ upgrade
 #tap homebrew/versions
 # for binary formula
 #tap homebrew/binary
+# for font
+tap sanemat/font
 
 # Packages for development
 install git
@@ -22,6 +24,7 @@ install htop-osx
 install tig
 install colordiff
 install source-highlight
+install ricty
 
 # Remove outdated versions
 cleanup
