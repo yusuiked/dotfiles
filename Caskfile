@@ -3,6 +3,8 @@
 # Add Repository
 # for Homebrew Cask
 tap caskroom/cask
+# for old version
+tap caskroom/versions
 # Install Cask
 install brew-cask
 
@@ -21,3 +23,4 @@ cask install lightpaper
 # packages for brew-cask used in the work
 cask install skype
 cask install hipchat
+cask install java7

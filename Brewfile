@@ -6,7 +6,7 @@ upgrade
 
 # Add Repository
 # for old version
-#tap homebrew/versions
+tap homebrew/versions
 # for binary formula
 #tap homebrew/binary
 # for font
