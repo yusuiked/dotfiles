@@ -15,6 +15,7 @@ cask install google-japanese-ime
 cask install clipmenu
 cask install iterm2
 cask install sublime-text
+cask install sourcetree
 
 # packages for brew-cask used in the work
 cask install skype
