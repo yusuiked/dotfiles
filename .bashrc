@@ -1,4 +1,5 @@
 # User specific aliases and functions
+export PATH=~/bin:$PATH
 
 # git settings
 source /usr/local/etc/bash_completion.d/git-prompt.sh
