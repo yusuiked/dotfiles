@@ -19,6 +19,7 @@ cask install iterm2
 cask install sourcetree
 cask install sublime-text
 cask install lightpaper
+cask install intellij-idea
 
 # packages for brew-cask used in the work
 cask install skype
