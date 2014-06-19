@@ -27,3 +27,6 @@ alias la='ls -a'
 alias ll='ls -hl'
 alias lf='ls -F'
 alias l.='ls -d .*'
+
+#THIS MUST BE AT THE END OF THE FILE FOR GVM TO WORK!!!
+[[ -s "/Users/a12323/.gvm/bin/gvm-init.sh" ]] && source "/Users/a12323/.gvm/bin/gvm-init.sh"
