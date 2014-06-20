@@ -15,6 +15,7 @@ cask install alfred
 cask install the-unarchiver
 cask install google-japanese-ime
 cask install clipmenu
+cask install menumeters
 cask install iterm2
 cask install sourcetree
 cask install sublime-text
