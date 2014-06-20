@@ -25,6 +25,11 @@ install tig
 install colordiff
 install source-highlight
 install ricty
+# Ruby
+install rbenv
+install ruby-build
+install openssl
+install readline
 
 # Remove outdated versions
 cleanup
