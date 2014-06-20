@@ -21,6 +21,8 @@ cask install sourcetree
 cask install sublime-text
 cask install lightpaper
 cask install intellij-idea
+cask install virtualbox
+cask install vagrant
 
 # packages for brew-cask used in the work
 cask install skype
