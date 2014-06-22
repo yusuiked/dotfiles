@@ -14,6 +14,7 @@ cask install google-chrome
 cask install alfred
 cask install the-unarchiver
 cask install google-japanese-ime
+cask install keyremap4macbook
 cask install clipmenu
 cask install menumeters
 cask install iterm2
