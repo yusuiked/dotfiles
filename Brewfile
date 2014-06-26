@@ -20,6 +20,7 @@ install wget
 install tree
 install pstree
 install nmap
+install jq
 install htop-osx
 install tig
 install colordiff
