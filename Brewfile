@@ -36,6 +36,8 @@ install sbt
 install typesafe-activator
 # Redis
 install redis
+# Utility
+install highlight # syntax highlight for source code in the Keynote slide.
 
 # Remove outdated versions
 cleanup
