@@ -31,6 +31,9 @@ install rbenv
 install ruby-build
 install openssl
 install readline
+# Scala
+install sbt
+install typesafe-activator
 
 # Remove outdated versions
 cleanup
