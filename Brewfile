@@ -34,6 +34,8 @@ install readline
 # Scala
 install sbt
 install typesafe-activator
+# Redis
+install redis
 
 # Remove outdated versions
 cleanup
