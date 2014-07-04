@@ -24,6 +24,7 @@ cask install lightpaper
 cask install intellij-idea
 cask install virtualbox
 cask install vagrant
+cask install skitch
 
 # packages for brew-cask used in the work
 cask install skype
