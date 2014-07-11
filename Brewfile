@@ -26,6 +26,8 @@ install tig
 install colordiff
 install source-highlight
 install ricty
+# Node
+install nodebrew
 # Ruby
 install rbenv
 install ruby-build
