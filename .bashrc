@@ -30,5 +30,8 @@ alias l.='ls -d .*'
 # Settings Java version
 export JAVA_HOME=$(/usr/libexec/java_home -v 1.7)
 
+# nodebrew
+export PATH=$HOME/.nodebrew/current/bin:$PATH
+
 #THIS MUST BE AT THE END OF THE FILE FOR GVM TO WORK!!!
 [[ -s "/Users/a12323/.gvm/bin/gvm-init.sh" ]] && source "/Users/a12323/.gvm/bin/gvm-init.sh"
