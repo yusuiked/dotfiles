@@ -38,6 +38,8 @@ install sbt
 install typesafe-activator
 # Redis
 install redis
+# heroku
+install heroku-toolbelt
 # Utility
 install highlight # syntax highlight for source code in the Keynote slide.
 
