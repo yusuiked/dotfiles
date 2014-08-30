@@ -16,7 +16,7 @@ PS1='\[\ek\e\\\][\[\e[32m\]\u@\h \[\e[34m\]\w\[\e[31m\]$(__git_ps1)\[\e[00m\]]\$
 # color diff
 alias diff='colordiff'
 # less の syntax highlight
-export LESS='-R'
+export LESS='-R -x4'    # ANSI Color Escape Sequence を色表示、タブ幅 4
 export LESSOPEN='| /usr/local/bin/src-hilite-lesspipe.sh %s'
 
 # Setting of aliases below
@@ -28,7 +28,7 @@ alias lf='ls -F'
 alias l.='ls -d .*'
 
 # Settings Java version
-export JAVA_HOME=$(/usr/libexec/java_home -v 1.7)
+export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
 
 # nodebrew
 export PATH=$HOME/.nodebrew/current/bin:$PATH
