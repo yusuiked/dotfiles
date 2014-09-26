@@ -19,6 +19,7 @@ install nkf
 install wget
 install tree
 install pstree
+install watch
 install nmap
 install jq
 install htop-osx
@@ -38,6 +39,8 @@ install sbt
 install typesafe-activator
 # Redis
 install redis
+# Cassandra
+install Cassandra
 # heroku
 install heroku-toolbelt
 # Utility
