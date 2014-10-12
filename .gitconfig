@@ -5,12 +5,13 @@
 	ui = auto
 [core]
 	autocrlf = input
-	excludesfile = /Users/a12323/.gitignore_global
+	excludesfile = ~/.gitignore_global
+    attributesfile = ~/.gitattributes_global
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
 [mergetool "sourcetree"]
-	cmd = /usr/local/Caskroom/sourcetree/1.9.6/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
 [pager]
 	log = diff-highlight | less
