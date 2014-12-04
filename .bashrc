@@ -30,6 +30,8 @@ alias la='ls -a'
 alias ll='ls -hl'
 alias lf='ls -F'
 alias l.='ls -d .*'
+# tmux
+alias tm='tmux'
 
 # Settings Java version
 export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)

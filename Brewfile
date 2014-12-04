@@ -22,6 +22,7 @@ install pstree
 install watch
 install nmap
 install jq
+install tmux
 install htop-osx
 install tig
 install colordiff
