@@ -77,3 +77,8 @@ set shiftwidth=4
 
 " キーボードでTabキーを押したときに挿入される空白の量
 set softtabstop=4
+
+" tmux 経由で起動した vim でクリップボードを共有する
+" vim --version が +clipboard になっていないとダメ。また、CUI 版は fakeclip が必要
+" http://vim.g.hatena.ne.jp/tokorom/20111211/1323619680
+"set clipboard=unnamed,autoselect
