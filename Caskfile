@@ -20,7 +20,6 @@ cask install menumeters
 cask install iterm2
 cask install sourcetree
 cask install sublime-text
-cask install lightpaper
 #cask install intellij-idea
 cask install mysqlworkbench
 cask install virtualbox
