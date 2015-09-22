@@ -40,8 +40,6 @@ install sbt
 install typesafe-activator
 # Redis
 install redis
-# Cassandra
-install Cassandra
 # heroku
 install heroku-toolbelt
 # Utility
