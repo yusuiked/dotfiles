@@ -36,8 +36,8 @@ install ruby-build
 install openssl
 install readline
 # Scala
-install sbt
-install typesafe-activator
+# install sbt
+# install typesafe-activator
 # Redis
 install redis
 # heroku
