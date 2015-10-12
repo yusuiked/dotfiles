@@ -1,5 +1,12 @@
 # User specific aliases and functions
 
+# Setting the character encoding of the Java and Groovy
+# http://uehaj.hatenablog.com/entry/20090815/1250316330
+# Java と Groovy 全体（JVM全体）のエンコーディングを変更したい場合
+export _JAVA_OPTIONS='-Dfile.encoding=UTF-8'
+# Groovy のみエンコーディングを変更したい場合
+#export JAVA_OPTS='-Dgroovy.source.encoding=UTF-8'
+
 # git settings
 source /usr/local/etc/bash_completion.d/git-prompt.sh
 source /usr/local/etc/bash_completion.d/git-completion.bash
