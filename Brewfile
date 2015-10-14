@@ -44,7 +44,7 @@ install redis
 install heroku-toolbelt
 # Utility
 install highlight # syntax highlight for source code in the Keynote slide.
-install git-now
+# install git-now
 
 # Remove outdated versions
 cleanup
