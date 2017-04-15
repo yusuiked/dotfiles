@@ -6,17 +6,7 @@
 [core]
 	autocrlf = input
 	excludesfile = ~/.gitignore_global
-    attributesfile = ~/.gitattributes_global
-[difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
-[mergetool "sourcetree"]
-	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
-[pager]
-	log = diff-highlight | less
-	show = diff-highlight | less
-	diff = diff-highlight | less
+	attributesfile = ~/.gitattributes_global
 [alias]
 	ci = commit
 	co = checkout
@@ -24,3 +14,13 @@
 	br = branch
 	hist = log --pretty=\"format:%C(White)%ad %C(yellow)%h %C(Red)(%an): %C(White)%s\" --graph --date=short
 	ig = "!gi() { curl -L -s https://www.gitignore.io/api/$@ ;}; gi"
+[pager]
+	log = diff-highlight | less
+	show = diff-highlight | less
+	diff = diff-highlight | less
+[interactive]
+	diffFilter = diff-highlight
+[diff]
+	compactionHeuristic = true
+[ghq]
+	root = ~/src
