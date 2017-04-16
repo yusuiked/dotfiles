@@ -57,6 +57,36 @@ if [ -d $(brew --prefix)/opt/coreutils/libexec/gnubin ]; then
   # alias for ls
   alias ls='ls --color'
 fi
+# findutils
+if [ -d $(brew --prefix)/opt/findutils/bin ]; then
+  export PATH="$(brew --prefix)/opt/findutils/bin:$PATH"
+  export MANPATH="$(brew --prefix)/opt/findutils/share/man:$MANPATH"
+fi
+# sed
+if [ -d $(brew --prefix)/opt/gnu-sed/bin ]; then
+  export PATH="$(brew --prefix)/opt/gnu-sed/bin:$PATH"
+  export MANPATH="$(brew --prefix)/opt/gnu-sed/share/man:$MANPATH"
+fi
+# tar
+if [ -d $(brew --prefix)/opt/gnu-tar/bin ]; then
+  export PATH="$(brew --prefix)/opt/gnu-tar/bin:$PATH"
+  export MANPATH="$(brew --prefix)/opt/gnu-tar/share/man:$MANPATH"
+fi
+# grep
+if [ -d $(brew --prefix)/opt/grep/bin ]; then
+  export PATH="$(brew --prefix)/opt/grep/bin:$PATH"
+  export MANPATH="$(brew --prefix)/opt/grep/share/man:$MANPATH"
+fi
+# gzip
+if [ -d $(brew --prefix)/opt/gzip/bin ]; then
+  export PATH="$(brew --prefix)/opt/gzip/bin:$PATH"
+  export MANPATH="$(brew --prefix)/opt/gzip/share/man:$MANPATH"
+fi
+# awk
+if [ -d $(brew --prefix)/opt/gawk/bin ]; then
+  export PATH="$(brew --prefix)/opt/gawk/bin:$PATH"
+  export MANPATH="$(brew --prefix)/opt/gawk/share/man:$MANPATH"
+fi
 
 ##################
 # Other settings #
