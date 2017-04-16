@@ -19,7 +19,7 @@ GIT_PS1_SHOWUPSTREAM="auto"
 
 # less colorize, syntax highlighting
 export LESS='-R -x4'    # ANSI Color Escape Sequence, tab stop
-#export LESSOPEN='| /usr/local/bin/src-hilite-lesspipe.sh %s'
+export LESSOPEN='| /usr/local/bin/src-hilite-lesspipe.sh %s'
 
 # Setting of aliases below
 # ls
