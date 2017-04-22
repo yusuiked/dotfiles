@@ -51,41 +51,41 @@ if [ -d $HOME/.anyenv ]; then
   eval "$(anyenv init -)"
 fi
 # coreutils
-if [ -d $(brew --prefix)/opt/coreutils/libexec/gnubin ]; then
-  export PATH="$(brew --prefix)/opt/coreutils/libexec/gnubin:$PATH"
-  export MANPATH="$(brew --prefix)/opt/coreutils/libexec/gnuman:$MANPATH"
+if [ -d $(brew --prefix coreutils)/libexec/gnubin ]; then
+  export PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
+  export MANPATH="$(brew --prefix coreutils)/libexec/gnuman:$MANPATH"
   # alias for ls
   alias ls='ls --color'
 fi
 # findutils
-if [ -d $(brew --prefix)/opt/findutils/bin ]; then
-  export PATH="$(brew --prefix)/opt/findutils/bin:$PATH"
-  export MANPATH="$(brew --prefix)/opt/findutils/share/man:$MANPATH"
+if [ -d $(brew --prefix findutils)/bin ]; then
+  export PATH="$(brew --prefix findutils)/bin:$PATH"
+  export MANPATH="$(brew --prefix findutils)/share/man:$MANPATH"
 fi
 # sed
-if [ -d $(brew --prefix)/opt/gnu-sed/bin ]; then
-  export PATH="$(brew --prefix)/opt/gnu-sed/bin:$PATH"
-  export MANPATH="$(brew --prefix)/opt/gnu-sed/share/man:$MANPATH"
+if [ -d $(brew --prefix gnu-sed)/bin ]; then
+  export PATH="$(brew --prefix gnu-sed)/bin:$PATH"
+  export MANPATH="$(brew --prefix gnu-sed)/share/man:$MANPATH"
 fi
 # tar
-if [ -d $(brew --prefix)/opt/gnu-tar/bin ]; then
-  export PATH="$(brew --prefix)/opt/gnu-tar/bin:$PATH"
-  export MANPATH="$(brew --prefix)/opt/gnu-tar/share/man:$MANPATH"
+if [ -d $(brew --prefix gnu-tar)/bin ]; then
+  export PATH="$(brew --prefix gnu-tar)/bin:$PATH"
+  export MANPATH="$(brew --prefix gnu-tar)/share/man:$MANPATH"
 fi
 # grep
-if [ -d $(brew --prefix)/opt/grep/bin ]; then
-  export PATH="$(brew --prefix)/opt/grep/bin:$PATH"
-  export MANPATH="$(brew --prefix)/opt/grep/share/man:$MANPATH"
+if [ -d $(brew --prefix grep)/bin ]; then
+  export PATH="$(brew --prefix grep)/bin:$PATH"
+  export MANPATH="$(brew --prefix grep)/share/man:$MANPATH"
 fi
 # gzip
-if [ -d $(brew --prefix)/opt/gzip/bin ]; then
-  export PATH="$(brew --prefix)/opt/gzip/bin:$PATH"
-  export MANPATH="$(brew --prefix)/opt/gzip/share/man:$MANPATH"
+if [ -d $(brew --prefix gzip)/bin ]; then
+  export PATH="$(brew --prefix gzip)/bin:$PATH"
+  export MANPATH="$(brew --prefix gzip)/share/man:$MANPATH"
 fi
 # awk
-if [ -d $(brew --prefix)/opt/gawk/bin ]; then
-  export PATH="$(brew --prefix)/opt/gawk/bin:$PATH"
-  export MANPATH="$(brew --prefix)/opt/gawk/share/man:$MANPATH"
+if [ -d $(brew --prefix gawk)/bin ]; then
+  export PATH="$(brew --prefix gawk)/bin:$PATH"
+  export MANPATH="$(brew --prefix gawk)/share/man:$MANPATH"
 fi
 
 ##################
