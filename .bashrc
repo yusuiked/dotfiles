@@ -62,6 +62,11 @@ if [ -d /usr/local/opt/findutils/bin ]; then
   export PATH="/usr/local/opt/findutils/bin:$PATH"
   export MANPATH="/usr/local/opt/findutils/share/man:$MANPATH"
 fi
+# diffutils
+if [ -d /usr/local/opt/diffutils/bin ]; then
+  export PATH="/usr/local/opt/diffutils/bin:$PATH"
+  export MANPATH="/usr/local/opt/diffutils/share/man:$MANPATH"
+fi
 # sed
 if [ -d /usr/local/opt/gnu-sed/bin ]; then
   export PATH="/usr/local/opt/gnu-sed/bin:$PATH"
