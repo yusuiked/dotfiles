@@ -106,10 +106,6 @@ export _JAVA_OPTIONS='-Dfile.encoding=UTF-8'
 # Settings Java version
 export JAVA_HOME=$(/usr/libexec/java_home -v "$(jenv global)")
 
-# for IRKit
-export CLIENT_KEY=824B46F06595438CA507FF10C229FDA6
-export DEVICE_ID=60856F2599D64338A9D6B59F1EA7A9EB
-
 # Work around which PATH duplication for tmux
 # refs: http://qiita.com/key-amb/items/ce39b0c85b30888e1e3b
 _path=""
