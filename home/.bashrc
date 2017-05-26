@@ -106,6 +106,10 @@ export _JAVA_OPTIONS='-Dfile.encoding=UTF-8'
 # Settings Java version
 export JAVA_HOME=$(/usr/libexec/java_home -v "$(jenv global)")
 
+# for direnv
+export EDITOR=vim
+eval "$(direnv hook bash)"
+
 # Work around which PATH duplication for tmux
 # refs: http://qiita.com/key-amb/items/ce39b0c85b30888e1e3b
 _path=""
