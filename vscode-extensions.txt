@@ -1,3 +1,4 @@
 EditorConfig.EditorConfig
 dbaeumer.vscode-eslint
+rebornix.Ruby
 vscodevim.vim
