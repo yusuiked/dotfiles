@@ -5,9 +5,10 @@ brew "bash-completion"
 brew "coreutils"
 brew "diffutils"
 brew "direnv"
+brew "git"
+brew "ffmpeg"
 brew "findutils", args: ["with-default-names"]
 brew "gawk"
-brew "git"
 brew "ghq"
 brew "git-secrets"
 brew "gnu-sed", args: ["with-default-names"]
