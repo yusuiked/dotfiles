@@ -1,4 +1,5 @@
 tap "caskroom/cask"
+tap "caskroom/versions"
 tap "heroku/brew"
 tap "homebrew/bundle"
 tap "homebrew/core"
@@ -52,7 +53,6 @@ cask "intellij-idea"
 cask "istat-menus"
 cask "istumbler"
 cask "iterm2"
-cask "java"
 cask "karabiner-elements"
 cask "kitematic"
 cask "qfinder-pro"
@@ -64,6 +64,7 @@ cask "vagrant"
 cask "virtualbox"
 cask "visual-studio-code"
 cask "vlc"
+cask "caskroom/versions/java8"
 mas "1Password", id: 443987910
 mas "Day One", id: 1055511498
 mas "Evernote", id: 406056744
