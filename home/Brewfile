@@ -1,4 +1,5 @@
 tap "caskroom/cask"
+tap "heroku/brew"
 tap "homebrew/bundle"
 tap "homebrew/core"
 brew "bash-completion"
@@ -15,6 +16,8 @@ brew "gnu-sed", args: ["with-default-names"]
 brew "gnu-tar", args: ["with-default-names"]
 brew "grep", args: ["with-default-names"]
 brew "gzip"
+brew "icu4c"
+brew "node"
 brew "heroku"
 brew "htop"
 brew "hub"
