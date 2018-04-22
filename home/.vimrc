@@ -78,6 +78,10 @@ set shiftwidth=4
 " キーボードでTabキーを押したときに挿入される空白の量
 set softtabstop=4
 
+" vim で backspace が効かない不具合に対処
+" http://wonderwall.hatenablog.com/entry/2016/03/23/232634
+set backspace=indent,eol,start
+
 " tmux 経由で起動した vim でクリップボードを共有する
 " vim --version が +clipboard になっていないとダメ。また、CUI 版は fakeclip が必要
 " http://vim.g.hatena.ne.jp/tokorom/20111211/1323619680
