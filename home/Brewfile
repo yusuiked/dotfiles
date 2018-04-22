@@ -89,6 +89,7 @@ cask "visual-studio-code"
 cask "vlc"
 cask "caskroom/fonts/font-cica"
 cask "caskroom/versions/java8"
+cask "caskroom/versions/microsoft-remote-desktop-beta"
 mas "1Password", id: 443987910
 mas "Day One", id: 1055511498
 mas "Evernote", id: 406056744
