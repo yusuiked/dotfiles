@@ -39,12 +39,16 @@ eval "$(hub alias -s)"
 # for ghq,peco,hub
 alias repo='cd $(ghq list -p | peco)'
 alias ghrepo='hub browse $(ghq list | peco | cut -d "/" -f 2,3)'
+# vim
+alias vi='vim'
 # tmux
 alias tm='tmux'
 
 #################
 # PATH settings #
 #################
+# man
+export MANPATH="/usr/local/share/man:$MANPATH"
 # anyenv
 if [ -d $HOME/.anyenv ]; then
   export PATH="$HOME/.anyenv/bin:$PATH"
@@ -91,6 +95,10 @@ fi
 if [ -d /usr/local/opt/gawk/bin ]; then
   export PATH="/usr/local/opt/gawk/bin:$PATH"
   export MANPATH="/usr/local/opt/gawk/share/man:$MANPATH"
+fi
+# python
+if [ -d /usr/local/opt/python/libexec/bin ]; then
+  export PATH="/usr/local/opt/python/libexec/bin:$PATH"
 fi
 
 ##################
