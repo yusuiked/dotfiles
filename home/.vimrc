@@ -86,3 +86,14 @@ set backspace=indent,eol,start
 " vim --version が +clipboard になっていないとダメ。また、CUI 版は fakeclip が必要
 " http://vim.g.hatena.ne.jp/tokorom/20111211/1323619680
 "set clipboard=unnamed,autoselect
+
+" powerline の設定
+let g:powerline_pycmd="python3"
+python3 from powerline.vim import setup as powerline_setup
+python3 powerline_setup()
+python3 del powerline_setup
+
+set laststatus=2 " Always display the statusline in all windows
+set showtabline=2 " Always display the tabline, even if there is only one tab
+set noshowmode " Hide the default mode text (e.g. -- INSERT -- below the statusline)
+set ambiwidth=double " For Cica font
