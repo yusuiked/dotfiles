@@ -22,11 +22,9 @@ brew "gnu-sed", args: ["with-default-names"]
 brew "gnu-tar", args: ["with-default-names"]
 brew "grep", args: ["with-default-names"]
 brew "gzip"
-brew "icu4c"
-brew "node"
-brew "heroku"
 brew "htop"
 brew "hub"
+brew "icu4c"
 brew "oniguruma"
 brew "jq"
 brew "openssl"
@@ -47,6 +45,7 @@ brew "wget"
 brew "zsh", args: ["without-etcdir"]
 brew "zsh-completions"
 brew "cloudfoundry/tap/cf-cli"
+brew "heroku/brew/heroku"
 brew "sanemat/font/ricty", args: ["with-powerline"]
 brew "vitorgalvao/tiny-scripts/cask-repair"
 cask "alfred"
