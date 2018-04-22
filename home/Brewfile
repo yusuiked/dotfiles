@@ -57,6 +57,7 @@ brew "sanemat/font/ricty", args: ["with-powerline"]
 brew "vitorgalvao/tiny-scripts/cask-repair"
 cask "alfred"
 cask "appcleaner"
+cask "atom"
 cask "bartender"
 cask "clipy"
 cask "dash"
