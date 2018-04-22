@@ -37,6 +37,8 @@ brew "tig"
 brew "tmux"
 brew "tree"
 brew "wget"
+brew "zsh", args: ["without-etcdir"]
+brew "zsh-completions"
 cask "alfred"
 cask "appcleaner"
 cask "bartender"
