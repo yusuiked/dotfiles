@@ -1,5 +1,8 @@
 # User specific aliases and functions
 
+# The global setting of the laptop is the English locale, in order to use Japanese in the terminal
+export LANG=ja_JP.UTF-8
+
 #######################
 # Terminal appearance #
 #######################
