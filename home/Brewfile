@@ -1,4 +1,5 @@
 tap "caskroom/cask"
+tap "caskroom/fonts"
 tap "caskroom/versions"
 tap "heroku/brew"
 tap "homebrew/bundle"
@@ -70,6 +71,7 @@ cask "vagrant"
 cask "virtualbox"
 cask "visual-studio-code"
 cask "vlc"
+cask "caskroom/fonts/font-cica"
 cask "caskroom/versions/java8"
 mas "1Password", id: 443987910
 mas "Day One", id: 1055511498
