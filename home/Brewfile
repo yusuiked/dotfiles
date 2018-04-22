@@ -50,6 +50,7 @@ brew "vim"
 brew "wget"
 brew "zsh", args: ["without-etcdir"]
 brew "zsh-completions"
+brew "zsh-syntax-highlighting"
 brew "cloudfoundry/tap/cf-cli"
 brew "heroku/brew/heroku"
 brew "sanemat/font/ricty", args: ["with-powerline"]
