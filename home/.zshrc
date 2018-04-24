@@ -78,6 +78,19 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
+# Interactive refinement of completion candidates
+# https://qiita.com/ToruIwashita/items/5cfa382e9ae2bd0502be
+zstyle ':completion:*' menu select interactive
+zstyle ':completion:*:default' menu select=2
+setopt menu_complete
+# Move completion menu with Vim keybind
+zmodload zsh/complist
+bindkey -M menuselect 'h' vi-backward-char
+bindkey -M menuselect 'j' vi-down-line-or-history
+bindkey -M menuselect 'k' vi-up-line-or-history
+bindkey -M menuselect 'l' vi-forward-char
+
+
 # Completion candidate color setting
 [ -n "${LS_COLORS}" ] && zstyle ':completion:*' list-colors "${LS_COLORS}"
 
