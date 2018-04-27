@@ -11,6 +11,7 @@ SAVEHIST=100000
 #######################
 bindkey -e
 # End of lines configured by zsh-newuser-install
+bindkey \^U backward-kill-line
 
 #######################
 # Alias settings      #
@@ -83,6 +84,9 @@ compinit
 zstyle ':completion:*' menu select interactive
 zstyle ':completion:*:default' menu select=2
 setopt menu_complete
+# Enhance completion
+setopt auto_param_slash
+setopt mark_dirs
 # Move completion menu with Vim keybind
 zmodload zsh/complist
 bindkey -M menuselect 'h' vi-backward-char
