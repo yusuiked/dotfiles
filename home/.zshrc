@@ -148,7 +148,7 @@ PROMPT='[%F{green}%n@%m%f %F{blue}%~%f]%# '
 # miscellaneous       #
 #######################
 # direnv
-eval "$(direnv hook bash)"
+eval "$(direnv hook zsh)"
 
 # Set word break on CLI
 
