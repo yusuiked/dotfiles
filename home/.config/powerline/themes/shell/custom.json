@@ -1,12 +1,12 @@
 {
 	"dividers": {
 		"left": {
-			"hard": "\uE0C0 ",
-			"soft": "\uE0C1 "
+			"hard": "\uE0B4 ",
+			"soft": "\uE0B5 "
 		},
 		"right": {
-			"hard": " \uE0C2",
-			"soft": " \uE0C3"
+			"hard": " \uE0B6",
+			"soft": " \uE0B7"
 		}
 	},
 	"segments": {
