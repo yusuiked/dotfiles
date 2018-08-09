@@ -36,6 +36,12 @@ alias lld='ll -d'
 alias l.='ls -d .*'
 # vim
 alias vi='vim'
+# colordiff
+if [ -f /usr/local/opt/colordiff/bin/colordiff ]; then
+  alias diff='colordiff -u'
+else
+  alias diff='diff -u'
+fi
 # tmux
 alias tm='tmux'
 # hub
