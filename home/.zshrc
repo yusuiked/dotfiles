@@ -112,37 +112,23 @@ autoload -Uz colors
 colors
 
 # Git prompt customize
-## When using vcs_info
-#autoload -Uz vcs_info
-#setopt prompt_subst
-#zstyle ':vcs_info:*' enable git 
-#zstyle ':vcs_info:*' formats '%F{cyan}(%s)-[%b]%f'
-#zstyle ':vcs_info:*' actionformats '%F{cyan}(%s)-[%b%f|%F{red}%a%f%F{cyan}]%f'
-#autoload -Uz is-at-least
-#if is-at-least 4.3.10; then
-#  zstyle ':vcs_info:git:*' check-for-changes true
-#  zstyle ':vcs_info:git:*' stagedstr '%F{green}+%f'
-#  zstyle ':vcs_info:git:*' unstagedstr '%F{red}*%f'
-#  zstyle ':vcs_info:git:*' formats '%F{cyan}(%s)-[%b] %c%u%f'
-#  zstyle ':vcs_info:git:*' actionformats '%F{cyan}(%s)-[%b%f|%F{red}%a%f%F{cyan}]%f %c%u%f'
-#fi
-#precmd () { LANG=en_US.UTF-8 vcs_info }
 
-## When using git-prompt
-source /usr/local/etc/bash_completion.d/git-prompt.sh
-setopt prompt_subst
-setopt transient_rprompt
-precmd () {
-  RPROMPT="%F{red}$(__git_ps1)%f"
-}
-GIT_PS1_SHOWDIRTYSTATE=true
-GIT_PS1_SHOWSTASHSTATE=true
-GIT_PS1_SHOWUNTRACKEDFILES=true
-GIT_PS1_SHOWUPSTREAM="auto"
-#GIT_PS1_SHOWCOLORHINTS=true
-
-PROMPT='[%F{green}%n@%m%f %F{blue}%~%f]%# '
-#RPROMPT='${vcs_info_msg_0_}'
+# In order to substitute in powerline-gitstatus, the following has been commented out.
+# https://github.com/jaspernbrouwer/powerline-gitstatus
+# ## using git-prompt
+# source /usr/local/etc/bash_completion.d/git-prompt.sh
+# setopt prompt_subst
+# setopt transient_rprompt
+# precmd () {
+#   RPROMPT="%F{red}$(__git_ps1)%f"
+# }
+# GIT_PS1_SHOWDIRTYSTATE=true
+# GIT_PS1_SHOWSTASHSTATE=true
+# GIT_PS1_SHOWUNTRACKEDFILES=true
+# GIT_PS1_SHOWUPSTREAM="auto"
+# GIT_PS1_SHOWCOLORHINTS=true
+#
+# PROMPT="[%F{green}%n@%m%f %F{blue}%~%f]%# "
 
 #######################
 # miscellaneous       #
