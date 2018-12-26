@@ -1,13 +1,3 @@
-EditorConfig.EditorConfig
-castwide.solargraph
-dbaeumer.vscode-eslint
-deerawan.vscode-dash
-donjayamanne.githistory
-jsynowiec.vscode-insertdatestring
-mauve.terraform
-rebornix.Ruby
-vscodevim.vim
-ziyasal.vscode-open-in-github
 aws-scripting-guy.cform
 CoenraadS.bracket-pair-colorizer
 deerawan.vscode-dash
