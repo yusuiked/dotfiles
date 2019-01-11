@@ -63,6 +63,10 @@ fi
 if [ -d /usr/local/opt/python/libexec/bin ]; then
   export PATH="/usr/local/opt/python/libexec/bin:$PATH"
 fi
+# for diff-highlight with Git
+if [ -e /usr/local/share/git-core/contrib/diff-highlight/diff-highlight ]; then
+  export PATH="/usr/local/share/git-core/contrib/diff-highlight:$PATH"
+fi
 
 ###################################
 # Specified Environment Variables #
