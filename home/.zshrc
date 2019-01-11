@@ -151,3 +151,11 @@ if $(whence powerline-daemon) > /dev/null; then
   powerline-daemon -q --replace
   . /usr/local/lib/python3.7/site-packages/powerline/bindings/zsh/powerline.zsh
 fi
+
+#######################
+# custom function     #
+#######################
+# Ref: https://blog.shibayu36.org/entry/2019/01/09/193000
+function epoch2date() {
+    date --date="@$1" +%Y-%m-%dT%H:%M:%S%z
+}
