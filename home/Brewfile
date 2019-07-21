@@ -27,7 +27,7 @@ brew "ghq"
 brew "git"
 brew "git-secrets"
 brew "gnu-sed", args: ["with-default-names"]
-brew "gnu-tar", args: ["with-default-names"]
+brew "gnu-tar"
 brew "grep", args: ["with-default-names"]
 brew "gzip"
 brew "htop"
