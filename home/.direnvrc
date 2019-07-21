@@ -1,0 +1,9 @@
+use_java() {
+  if [ "$#" -ne 1 ]; then
+    echo "usage: use java VERSION" >&2
+    return 1
+  fi
+  local java_dir=$HOME/.sdkman/candidates/java/$1
+  export JAVA_HOME=$java_dir
+  load_prefix $java_dir
+}

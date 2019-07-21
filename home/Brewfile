@@ -6,12 +6,12 @@ tap "homebrew/cask"
 tap "homebrew/cask-fonts"
 tap "homebrew/cask-versions"
 tap "homebrew/core"
+tap "homebrew/services"
 tap "sanemat/font"
 tap "vitorgalvao/tiny-scripts"
 brew "openssl"
 brew "python"
 brew "ansible"
-brew "awscli"
 brew "bash-completion"
 brew "icu4c"
 brew "boost"
@@ -20,6 +20,7 @@ brew "colordiff"
 brew "coreutils"
 brew "diffutils"
 brew "direnv"
+brew "fabric"
 brew "libunistring"
 brew "xvid"
 brew "ffmpeg"
@@ -31,9 +32,13 @@ brew "git"
 brew "git-secrets"
 brew "gnu-sed", args: ["with-default-names"]
 brew "gnu-tar"
+brew "gnu-time"
+brew "go"
+brew "graphviz"
 brew "grep", args: ["with-default-names"]
 brew "gzip"
 brew "htop"
+brew "httpie"
 brew "hub"
 brew "oniguruma"
 brew "jq"
@@ -43,7 +48,10 @@ brew "mysql"
 brew "nkf"
 brew "openssl@1.1"
 brew "peco"
+brew "plantuml"
+brew "postgresql@10"
 brew "pstree"
+brew "python@2"
 brew "reattach-to-user-namespace"
 brew "source-highlight"
 brew "terraform"
@@ -51,7 +59,6 @@ brew "tig"
 brew "tmux"
 brew "tree"
 brew "vim"
-brew "wakeonlan"
 brew "wget"
 brew "zsh"
 brew "zsh-completions"
@@ -64,7 +71,6 @@ cask "alfred"
 cask "appcleaner"
 cask "authy"
 cask "bartender"
-cask "chromedriver"
 cask "clipy"
 cask "dash"
 cask "discord"
@@ -72,6 +78,7 @@ cask "docker"
 cask "dropbox"
 cask "flux"
 cask "font-cica"
+cask "gas-mask"
 cask "ghost"
 cask "github"
 cask "google-chrome"
@@ -81,11 +88,13 @@ cask "intellij-idea"
 cask "istat-menus"
 cask "istumbler"
 cask "iterm2"
+cask "jetbrains-toolbox"
 cask "karabiner-elements"
 cask "kitematic"
 cask "microsoft-remote-desktop-beta"
-cask "qfinder-pro"
 cask "shiftit"
+cask "skype"
+cask "table-tool"
 cask "toggl"
 cask "tunnelblick"
 cask "typora"
@@ -95,23 +104,20 @@ cask "visual-studio-code"
 cask "vlc"
 mas "1Password 7", id: 1333542190
 mas "Day One", id: 1055511498
-mas "Evernote", id: 406056744
 mas "GarageBand", id: 682658836
 mas "iMovie", id: 408981434
 mas "Keynote", id: 409183694
 mas "LINE", id: 539883307
-mas "MoneyWiz", id: 465339122
-mas "Night Owl", id: 428834068
+mas "Monosnap", id: 540348655
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
 mas "Pocket", id: 568494494
 mas "Quiver", id: 866773894
-mas "ReceiptKeeper", id: 413449473
 mas "Skitch", id: 425955336
 mas "Slack", id: 803453959
-mas "Spark", id: 1176895641
 mas "Time Sink", id: 404363161
 mas "Todoist", id: 585829637
-mas "VirusScannerPlus", id: 595374522
+mas "WinArchiver Lite", id: 414855915
 mas "Wunderlist", id: 410628904
+mas "夜フクロウ", id: 428834068
 mas "紀伊國屋書店Kinoppy", id: 572547904

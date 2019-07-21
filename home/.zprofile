@@ -12,6 +12,10 @@ fi
 if [ -d /usr/local/share/man ]; then
   export MANPATH="/usr/local/share/man:$MANPATH"
 fi
+# Add /usr/local/sbin to PATH.
+if [ -d /usr/local/sbin ]; then
+  export PATH="/usr/local/sbin:$PATH"
+fi
 # anyenv
 if [ -d $HOME/.anyenv ]; then
   export PATH="$HOME/.anyenv/bin:$PATH"
@@ -80,6 +84,16 @@ fi
 # Setting the character encoding of the Java and Groovy
 # http://uehaj.hatenablog.com/entry/20090815/1250316330
 # When changing the character encoding of the entire JVM language to UTF-8.
-export _JAVA_OPTIONS='-Dfile.encoding=UTF-8'
+#export _JAVA_OPTIONS='-Dfile.encoding=UTF-8'
 # Groovy only when changing the character enconding to UTF-8.
 #export JAVA_OPTS='-Dgroovy.source.encoding=UTF-8'
+
+export GOPATH=~/go
+
+##
+# for postgresql 10
+##
+
+if [ -d /usr/local/opt/postgresql@10/bin ]; then
+  export PATH="/usr/local/opt/postgresql@10/bin:$PATH"
+fi

@@ -78,6 +78,11 @@ if [ -d /usr/local/share/zsh-completions ]; then
   fpath=(/usr/local/share/zsh-completions $fpath)
 fi
 
+# for User-Specific completion
+if [ -d ~/.zsh/completions ]; then
+  fpath=(~/.zsh/completions $fpath)
+fi
+
 # The following lines were added by compinstall
 zstyle :compinstall filename '/Users/yukung/.zshrc'
 
