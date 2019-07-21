@@ -14,7 +14,7 @@
         "left": [
 			{
 				"function": "powerline.segments.common.net.hostname",
-                "before": "\uF109 ",
+                "before": "💻  ",
                 "priority": 80
 			}
         ],

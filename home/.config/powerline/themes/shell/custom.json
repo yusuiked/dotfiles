@@ -1,12 +1,12 @@
 {
 	"dividers": {
 		"left": {
-			"hard": "\uE0B4 ",
-			"soft": "\uE0B5 "
+			"hard": " ",
+			"soft": " "
 		},
 		"right": {
-			"hard": " \uE0B6",
-			"soft": " \uE0B7"
+			"hard": " ",
+			"soft": " "
 		}
 	},
 	"segments": {
@@ -24,7 +24,7 @@
                     "only_if_ssh": false,
                     "exclude_domain": true
                 },
-                "before": "\uF109 ",
+                "before": "💻 ",
 				"priority": 10
 			},
 			{
