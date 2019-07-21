@@ -41,8 +41,8 @@
 				"function": "powerline.segments.common.net.network_load",
                 "args": {
                     "suffix": "B/s ",
-                    "recv_format": "\u23EC {value:>8}",
-                    "sent_format": "\u23EB {value:>8}"
+                    "recv_format": "\uF0ED {value:>8}",
+                    "sent_format": "\uF0EE {value:>8}"
                 },
 				"priority": 70
 			},
