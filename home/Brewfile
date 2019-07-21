@@ -49,7 +49,7 @@ brew "tmux"
 brew "tree"
 brew "vim"
 brew "wget"
-brew "zsh", args: ["without-etcdir"]
+brew "zsh"
 brew "zsh-completions"
 brew "zsh-syntax-highlighting"
 brew "cloudfoundry/tap/cf-cli"
