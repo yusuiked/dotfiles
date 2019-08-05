@@ -49,6 +49,16 @@ eval "$(hub alias -s)"
 # ghq, peco, hub (It is likely to be replaced by anyframe)
 alias repo='cd $(ghq list -p | peco)'
 alias ghrepo='hub browse $(ghq list | grep "github.com" | peco | cut -d "/" -f 2,3)'
+bindkey '^]' anything-repo
+function anything-repo() {
+  local src=$(ghq list --full-path | peco --query "$LBUFFER")
+  if [ -n "$src" ]; then
+    BUFFER="cd $src"
+    zle accept-line
+  fi
+  zle -R -c
+}
+zle -N anything-repo
 
 #######################
 # Terminal appearance #
