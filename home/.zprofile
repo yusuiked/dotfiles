@@ -88,7 +88,9 @@ fi
 # Groovy only when changing the character enconding to UTF-8.
 #export JAVA_OPTS='-Dgroovy.source.encoding=UTF-8'
 
-export GOPATH=~/go
+# for golang
+export GOPATH=$HOME
+export PATH="$HOME/bin:$PATH"
 
 ##
 # for postgresql 10
