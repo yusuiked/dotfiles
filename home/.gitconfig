@@ -1,6 +1,6 @@
 [user]
-	name = Yusuke Ikeda
-	email = y.ikeda@astamuse.co.jp
+	name = yukung
+	email = yukung.i@gmail.com
 [color]
 	ui = auto
 [core]
@@ -29,3 +29,5 @@
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
+[includeIf "gitdir:~/src/gl.astamuse.net/"]
+	path = .gitconfig_office
