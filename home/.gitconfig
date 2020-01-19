@@ -30,4 +30,4 @@
 	process = git-lfs filter-process
 	required = true
 [includeIf "gitdir:~/src/gl.astamuse.net/"]
-	path = .gitconfig_office
+	path = ~/.gitconfig_office
