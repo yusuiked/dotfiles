@@ -174,7 +174,7 @@ typeset -U path fpath manpath
 # powerline
 if $(whence powerline-daemon) > /dev/null; then
   powerline-daemon -q --replace
-  . /usr/local/lib/python3.7/site-packages/powerline/bindings/zsh/powerline.zsh
+  . /usr/local/lib/python3.9/site-packages/powerline/bindings/zsh/powerline.zsh
 fi
 
 #######################
