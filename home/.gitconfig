@@ -33,3 +33,6 @@
 	required = true
 [includeIf "gitdir:~/src/gl.astamuse.net/"]
 	path = ~/.gitconfig_office
+[pull]
+	ff = only
+	rebase = false
