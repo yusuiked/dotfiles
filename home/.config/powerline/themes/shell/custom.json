@@ -24,7 +24,7 @@
                     "only_if_ssh": false,
                     "exclude_domain": true
                 },
-                "before": "\uF109 ",
+                "before": "💻 ",
 				"priority": 10
 			},
 			{
