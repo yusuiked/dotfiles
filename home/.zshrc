@@ -80,6 +80,16 @@ if [ -f /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]; 
   source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 fi
 
+# zsh-history-substring-search (See: https://github.com/zsh-users/zsh-history-substring-search)
+if [ -f /usr/local/share/zsh-history-substring-search/zsh-history-substring-search.zsh ]; then
+  source /usr/local/share/zsh-history-substring-search/zsh-history-substring-search.zsh
+fi
+
+# zsh-autosuggestions (See: https://github.com/zsh-users/zsh-autosuggestions)
+if [ -f $HOME/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh ]; then
+  source $HOME/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+fi
+
 #######################
 # Completion settings #
 #######################
