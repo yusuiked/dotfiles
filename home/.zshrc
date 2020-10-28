@@ -166,8 +166,9 @@ eval "$(direnv hook zsh)"
 autoload -Uz select-word-style
 select-word-style default
 #zstyle ':zle:*' word-chars " _-./;@"
-zstyle ':zle:*' word-chars " ;@"
+zstyle ':zle:*' word-chars " ;@\"\'"
 zstyle ':zle:*' word-style unspecified
+WORDCHARS="$WORDCHARS\'\""
 # Elimination of duplicate PATH
 typeset -U path fpath manpath
 
