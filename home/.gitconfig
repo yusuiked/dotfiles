@@ -10,6 +10,8 @@
 [alias]
 	ci = commit
 	co = checkout
+    sw = switch
+    rst = restore
 	st = status
 	br = branch
 	hist = log --pretty=\"format:%C(White)%ad %C(yellow)%h %C(Red)(%an): %C(White)%s\" --graph --date=short
