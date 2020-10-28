@@ -15,8 +15,8 @@ brew "bash-completion"
 brew "icu4c"
 brew "boost"
 brew "pcre"
-brew "python"
 brew "glib"
+brew "circleci"
 brew "colordiff"
 brew "coreutils"
 brew "diffutils"
@@ -38,6 +38,7 @@ brew "gzip"
 brew "htop"
 brew "httpie"
 brew "hub"
+brew "hugo"
 brew "oniguruma"
 brew "jq"
 brew "mackup"
@@ -57,6 +58,7 @@ brew "wakeonlan"
 brew "wget"
 brew "xsv"
 brew "zsh"
+brew "zsh-autosuggestions"
 brew "zsh-completions"
 brew "zsh-syntax-highlighting"
 brew "cloudfoundry/tap/cf-cli"
@@ -75,6 +77,7 @@ cask "docker"
 cask "dropbox"
 cask "flux"
 cask "font-cica"
+cask "font-hackgen"
 cask "gas-mask"
 cask "ghost"
 cask "github"
@@ -82,8 +85,8 @@ cask "google-chrome"
 cask "google-cloud-sdk"
 cask "google-japanese-ime"
 cask "gyazo"
+cask "inkdrop"
 cask "istat-menus"
-cask "istumbler"
 cask "iterm2"
 cask "jetbrains-toolbox"
 cask "karabiner-elements"
@@ -103,14 +106,14 @@ mas "Evernote", id: 406056744
 mas "GarageBand", id: 682658836
 mas "iMovie", id: 408981434
 mas "Keynote", id: 409183694
-mas "Kinokuniya Kinoppy", id: 572547904
-mas "Night Owl", id: 428834068
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
-mas "Pocket", id: 568494494
-mas "Quiver", id: 866773894
+mas "PhotoScape X", id: 929507092
 mas "ReceiptKeeper", id: 413449473
 mas "Skitch", id: 425955336
 mas "Spark", id: 1176895641
 mas "Todoist", id: 585829637
 mas "Virus Scanner Plus", id: 595374522
+mas "WiFi Explorer Lite", id: 1408727408
+mas "夜フクロウ", id: 428834068
+mas "紀伊國屋書店Kinoppy", id: 572547904
