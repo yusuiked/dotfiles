@@ -86,8 +86,8 @@ if [ -f /usr/local/share/zsh-history-substring-search/zsh-history-substring-sear
 fi
 
 # zsh-autosuggestions (See: https://github.com/zsh-users/zsh-autosuggestions)
-if [ -f $HOME/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh ]; then
-  source $HOME/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+if [ -f /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]; then
+  source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 fi
 
 #######################
