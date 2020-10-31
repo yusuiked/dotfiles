@@ -1,12 +1,5 @@
 # Lines configured by zsh-newuser-install
 #######################
-# History settings    #
-#######################
-HISTFILE=${HOME}/.zsh_history
-HISTSIZE=100000
-SAVEHIST=100000
-
-#######################
 # Key binding         #
 #######################
 bindkey -e
