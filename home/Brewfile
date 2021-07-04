@@ -102,6 +102,7 @@ cask "virtualbox"
 cask "visual-studio-code"
 cask "vlc"
 mas "1Password 7", id: 1333542190
+mas "com.adriangranados.wifiexplorerlite", id: 1408727408
 mas "Day One", id: 1055511498
 mas "Evernote", id: 406056744
 mas "GarageBand", id: 682658836
@@ -115,6 +116,5 @@ mas "Skitch", id: 425955336
 mas "Spark", id: 1176895641
 mas "Todoist", id: 585829637
 mas "Virus Scanner Plus", id: 595374522
-mas "WiFi Explorer Lite", id: 1408727408
 mas "夜フクロウ", id: 428834068
 mas "紀伊國屋書店Kinoppy", id: 572547904
