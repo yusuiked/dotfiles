@@ -56,6 +56,10 @@ if [ -d /usr/local/opt/gnu-tar/bin ]; then
   export PATH="/usr/local/opt/gnu-tar/bin:$PATH"
   export MANPATH="/usr/local/opt/gnu-tar/share/man:$MANPATH"
 fi
+# time
+if [ -d /usr/local/opt/gnu-time/bin ]; then
+  export PATH="/usr/local/opt/gnu-time/bin:$PATH"
+fi
 # grep
 if [ -d /usr/local/opt/grep/bin ]; then
   export PATH="/usr/local/opt/grep/bin:$PATH"
