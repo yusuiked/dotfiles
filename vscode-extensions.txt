@@ -45,6 +45,5 @@ vscjava.vscode-java-pack
 vscjava.vscode-java-test
 vscjava.vscode-maven
 vscodevim.vim
-vscoss.vscode-ansible
 wingrunr21.vscode-ruby
 ziyasal.vscode-open-in-github
