@@ -4,6 +4,7 @@ aws-scripting-guy.cform
 bierner.emojisense
 castwide.solargraph
 CoenraadS.bracket-pair-colorizer
+DavidAnson.vscode-markdownlint
 deerawan.vscode-dash
 donjayamanne.githistory
 EditorConfig.EditorConfig
