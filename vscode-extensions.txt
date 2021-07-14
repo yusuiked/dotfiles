@@ -25,6 +25,7 @@ marlon407.code-groovy
 marp-team.marp-vscode
 mechatroner.rainbow-csv
 ms-azuretools.vscode-docker
+MS-CEINTL.vscode-language-pack-ja
 ms-vscode-remote.remote-containers
 ms-vsliveshare.vsliveshare
 ms-vsliveshare.vsliveshare-audio
