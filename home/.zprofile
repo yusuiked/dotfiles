@@ -104,12 +104,6 @@ fi
 export GOPATH=$HOME
 export PATH="$HOME/bin:$PATH"
 
-# for perl
-if [ -x /usr/local/bin/cpanm ]; then
-  export PERL_CPANM_OPT="--local-lib=~/local/lib/perl5"
-  export PERL5LIB=$HOME/local/lib/perl5/lib/perl5:$PERL5LIB;
-fi
-
 ##
 # for postgresql 11
 ##
