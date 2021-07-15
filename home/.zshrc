@@ -87,13 +87,9 @@ fi
 # Completion settings #
 #######################
 # for zsh-completion
-if [ -d /usr/local/share/zsh-completions ]; then
-  fpath=(/usr/local/share/zsh-completions $fpath)
-fi
-
-# for User-Specific completion
-if [ -d ~/.zsh/completions ]; then
-  fpath=(~/.zsh/completions $fpath)
+if type brew &>/dev/null; then
+  fpath=($(brew --prefix)/share/zsh-completions $fpath)
+  fpath=($(brew --prefix)/share/zsh/site-functions $fpath)
 fi
 
 # The following lines were added by compinstall
