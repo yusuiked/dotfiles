@@ -22,6 +22,7 @@ brew "circleci"
 brew "cloc"
 brew "colordiff"
 brew "coreutils"
+brew "cpanminus"
 brew "ctop"
 brew "diffutils"
 brew "direnv"
@@ -52,6 +53,7 @@ brew "mackup"
 brew "mas"
 brew "nkf"
 brew "peco"
+brew "postgresql@11"
 brew "pstree"
 brew "reattach-to-user-namespace"
 brew "rename"
@@ -60,7 +62,6 @@ brew "tig"
 brew "tmux"
 brew "tree"
 brew "vim"
-brew "wakeonlan"
 brew "wget"
 brew "xsv"
 brew "zsh"
@@ -86,7 +87,6 @@ cask "font-cica"
 cask "font-hackgen"
 cask "gas-mask"
 cask "github"
-cask "google-chrome"
 cask "google-cloud-sdk"
 cask "google-japanese-ime"
 cask "gyazo"
@@ -96,16 +96,12 @@ cask "iterm2"
 cask "jasper"
 cask "jetbrains-toolbox"
 cask "karabiner-elements"
-cask "microsoft-remote-desktop-beta"
-cask "qfinder-pro"
 cask "rectangle"
-cask "toggl"
 cask "tunnelblick"
 cask "typora"
 cask "vagrant"
 cask "virtualbox"
 cask "visual-studio-code"
-cask "vlc"
 mas "1Password 7", id: 1333542190
 mas "com.adriangranados.wifiexplorerlite", id: 1408727408
 mas "Day One", id: 1055511498
@@ -115,11 +111,8 @@ mas "iMovie", id: 408981434
 mas "Keynote", id: 409183694
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
-mas "PhotoScape X", id: 929507092
-mas "ReceiptKeeper", id: 413449473
 mas "Skitch", id: 425955336
 mas "Spark", id: 1176895641
 mas "Todoist", id: 585829637
-mas "Virus Scanner Plus", id: 595374522
 mas "夜フクロウ", id: 428834068
 mas "紀伊國屋書店Kinoppy", id: 572547904
