@@ -16,6 +16,7 @@
 	br = branch
 	hist = log --pretty=\"format:%C(White)%ad %C(yellow)%h %C(Red)(%an): %C(White)%s\" --graph --date=short
 	ig = "!gi() { curl -L -s https://www.gitignore.io/api/$@ ;}; gi"
+	cbr = "!f() { git branch --merged | egrep -v '^\\*|develop|master|main' | xargs git branch -d ;}; f"
 [pager]
 	log = diff-highlight | less
 	show = diff-highlight | less
@@ -37,8 +38,6 @@
 	ff = only
 	rebase = false
 [secrets]
-	patterns = private_key
-	patterns = private_key_id
 	providers = git secrets --aws-provider
 	patterns = (A3T[A-Z0-9]|AKIA|AGPA|AIDA|AROA|AIPA|ANPA|ANVA|ASIA)[A-Z0-9]{16}
 	patterns = (\"|')?(AWS|aws|Aws)?_?(SECRET|secret|Secret)?_?(ACCESS|access|Access)?_?(KEY|key|Key)(\"|')?\\s*(:|=>|=)\\s*(\"|')?[A-Za-z0-9/\\+=]{40}(\"|')?
