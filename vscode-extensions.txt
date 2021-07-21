@@ -12,6 +12,7 @@ emilast.LogFileHighlighter
 esbenp.prettier-vscode
 golang.go
 GrapeCity.gc-excelviewer
+Gruntfuggly.todo-tree
 hashicorp.terraform
 hediet.vscode-drawio
 humao.rest-client
