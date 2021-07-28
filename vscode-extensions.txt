@@ -19,7 +19,6 @@ humao.rest-client
 IBM.output-colorizer
 jebbs.plantuml
 jsynowiec.vscode-insertdatestring
-k--kato.intellij-idea-keybindings
 kaiwood.endwise
 karigari.chat
 marlon407.code-groovy
