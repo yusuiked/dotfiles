@@ -39,22 +39,22 @@ fi
 # findutils
 if [ -d /usr/local/opt/findutils/bin ]; then
   export PATH="/usr/local/opt/findutils/bin:$PATH"
-  export MANPATH="/usr/local/opt/findutils/share/man:$MANPATH"
+  export MANPATH="/usr/local/opt/findutils/libexec/gnuman:$MANPATH"
 fi
 # diffutils
 if [ -d /usr/local/opt/diffutils/bin ]; then
   export PATH="/usr/local/opt/diffutils/bin:$PATH"
-  export MANPATH="/usr/local/opt/diffutils/share/man:$MANPATH"
+  export MANPATH="/usr/local/opt/diffutils/libexec/gnuman:$MANPATH"
 fi
 # sed
 if [ -d /usr/local/opt/gnu-sed/bin ]; then
-  export PATH="/usr/local/opt/gnu-sed/bin:$PATH"
-  export MANPATH="/usr/local/opt/gnu-sed/share/man:$MANPATH"
+  export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
+  export MANPATH="/usr/local/opt/gnu-sed/libexec/gnuman:$MANPATH"
 fi
 # tar
 if [ -d /usr/local/opt/gnu-tar/bin ]; then
   export PATH="/usr/local/opt/gnu-tar/bin:$PATH"
-  export MANPATH="/usr/local/opt/gnu-tar/share/man:$MANPATH"
+  export MANPATH="/usr/local/opt/gnu-tar/libexec/gnuman:$MANPATH"
 fi
 # time
 if [ -d /usr/local/opt/gnu-time/bin ]; then
@@ -62,8 +62,8 @@ if [ -d /usr/local/opt/gnu-time/bin ]; then
 fi
 # grep
 if [ -d /usr/local/opt/grep/bin ]; then
-  export PATH="/usr/local/opt/grep/bin:$PATH"
-  export MANPATH="/usr/local/opt/grep/share/man:$MANPATH"
+  export PATH="/usr/local/opt/grep/libexec/gnubin:$PATH"
+  export MANPATH="/usr/local/opt/grep/libexec/gnuman:$MANPATH"
 fi
 # gzip
 if [ -d /usr/local/opt/gzip/bin ]; then
