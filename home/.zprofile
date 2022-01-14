@@ -83,6 +83,10 @@ fi
 if [ -e /usr/local/share/git-core/contrib/diff-highlight/diff-highlight ]; then
   export PATH="/usr/local/share/git-core/contrib/diff-highlight:$PATH"
 fi
+# fzf default options
+if [ -x /usr/local/bin/fzf ]; then
+  export FZF_DEFAULT_OPTS='--height 40% --layout=reverse --border'
+fi
 
 ###################################
 # Specified Environment Variables #

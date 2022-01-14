@@ -40,11 +40,14 @@ alias tm='tmux'
 # hub
 eval "$(hub alias -s)"
 # ghq, peco, hub (It is likely to be replaced by anyframe)
-alias repo='cd $(ghq list -p | peco)'
-alias ghrepo='hub browse $(ghq list | grep "github.com" | peco | cut -d "/" -f 2,3)'
+#alias repo='cd $(ghq list -p | peco)'
+alias repo='cd $(ghq list -p | fzf)'
+#alias ghrepo='hub browse $(ghq list | grep "github.com" | peco | cut -d "/" -f 2,3)'
+alias ghrepo='hub browse $(ghq list | grep "github.com" | fzf | cut -d "/" -f 2,3)'
 bindkey '^]' anything-repo
 function anything-repo() {
-  local src=$(ghq list --full-path | peco --query "$LBUFFER")
+  #local src=$(ghq list --full-path | peco --query "$LBUFFER")
+  local src=$(ghq list --full-path | fzf --query "$LBUFFER")
   if [ -n "$src" ]; then
     BUFFER="cd $src"
     zle accept-line
