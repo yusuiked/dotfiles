@@ -3,14 +3,11 @@ Arjun.swagger-viewer
 aws-scripting-guy.cform
 bierner.emojisense
 castwide.solargraph
-CoenraadS.bracket-pair-colorizer
-DavidAnson.vscode-markdownlint
 deerawan.vscode-dash
 donjayamanne.githistory
 EditorConfig.EditorConfig
 emilast.LogFileHighlighter
 esbenp.prettier-vscode
-golang.go
 GrapeCity.gc-excelviewer
 Gruntfuggly.todo-tree
 hashicorp.terraform
@@ -21,7 +18,6 @@ jebbs.plantuml
 jsynowiec.vscode-insertdatestring
 kaiwood.endwise
 karigari.chat
-marlon407.code-groovy
 marp-team.marp-vscode
 mechatroner.rainbow-csv
 ms-azuretools.vscode-docker
