@@ -102,7 +102,7 @@ fi
 
 # for golang
 export GOPATH=$HOME
-export PATH="$HOME/bin:$PATH"
+export PATH="$GOPATH/bin:$PATH"
 
 ##
 # for postgresql 11
