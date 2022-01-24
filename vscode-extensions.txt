@@ -2,7 +2,6 @@ alefragnani.Bookmarks
 Arjun.swagger-viewer
 aws-scripting-guy.cform
 bierner.emojisense
-castwide.solargraph
 deerawan.vscode-dash
 donjayamanne.githistory
 EditorConfig.EditorConfig
@@ -16,7 +15,6 @@ humao.rest-client
 IBM.output-colorizer
 jebbs.plantuml
 jsynowiec.vscode-insertdatestring
-kaiwood.endwise
 karigari.chat
 marp-team.marp-vscode
 mechatroner.rainbow-csv
@@ -25,21 +23,11 @@ MS-CEINTL.vscode-language-pack-ja
 ms-vscode-remote.remote-containers
 ms-vsliveshare.vsliveshare
 ms-vsliveshare.vsliveshare-audio
-octref.vetur
 oderwat.indent-rainbow
-rebornix.ruby
-redhat.java
 redhat.vscode-yaml
 ritwickdey.LiveServer
 samuelcolvin.jinjahtml
 shardulm94.trailing-spaces
 tomoki1207.pdf
-VisualStudioExptTeam.vscodeintellicode
-vscjava.vscode-java-debug
-vscjava.vscode-java-dependency
-vscjava.vscode-java-pack
-vscjava.vscode-java-test
-vscjava.vscode-maven
 vscodevim.vim
-wingrunr21.vscode-ruby
 ziyasal.vscode-open-in-github
