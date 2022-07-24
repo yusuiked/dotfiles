@@ -16,6 +16,13 @@ if [ -x /usr/libexec/path_helper ]; then
   eval `/usr/libexec/path_helper -s`
 fi
 
+# Switching with CPU architecture
+if [ "$(uname -m)" = "arm64" ]; then
+  eval "$(/opt/homebrew/bin/brew shellenv)"
+else
+  eval "$(/usr/local/bin/brew shellenv)"
+fi
+
 # Initialize MANPATH
 if [ -d /usr/local/share/man ]; then
   export MANPATH="/usr/local/share/man:$MANPATH"
@@ -24,6 +31,7 @@ fi
 if [ -d /usr/local/sbin ]; then
   export PATH="/usr/local/sbin:$PATH"
 fi
+
 # anyenv
 if [ -d $HOME/.anyenv ]; then
   export PATH="$HOME/.anyenv/bin:$PATH"
