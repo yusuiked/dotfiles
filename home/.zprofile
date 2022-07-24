@@ -33,10 +33,10 @@ else
 fi
 
 # anyenv
-if [ -d $HOME/.anyenv ]; then
-  export PATH="$HOME/.anyenv/bin:$PATH"
+if [ -x $HOMEBREW_PREFIX/bin/anyenv ]; then
   eval "$(anyenv init -)"
 fi
+
 # coreutils
 if [ -d /usr/local/opt/coreutils/libexec/gnubin ]; then
   export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
