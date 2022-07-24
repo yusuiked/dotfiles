@@ -21,15 +21,15 @@ if [ "$(uname -m)" = "arm64" ]; then
   eval "$(/opt/homebrew/bin/brew shellenv)"
 else
   eval "$(/usr/local/bin/brew shellenv)"
-fi
 
-# Initialize MANPATH
-if [ -d /usr/local/share/man ]; then
-  export MANPATH="/usr/local/share/man:$MANPATH"
-fi
-# Add /usr/local/sbin to PATH.
-if [ -d /usr/local/sbin ]; then
-  export PATH="/usr/local/sbin:$PATH"
+  # Add /usr/local/sbin to PATH.
+  if [ -d /usr/local/sbin ]; then
+    export PATH="/usr/local/sbin:$PATH"
+  fi
+  # Initialize MANPATH
+  if [ -d /usr/local/share/man ]; then
+    export MANPATH="/usr/local/share/man:$MANPATH"
+  fi
 fi
 
 # anyenv
