@@ -105,7 +105,7 @@ cask "rectangle"
 cask "toggl-track"
 cask "tunnelblick"
 cask "vagrant"
-cask "virtualbox"
+#cask "virtualbox"        # Not available on Apple Silicon Mac
 cask "visual-studio-code"
 cask "vlc"
 mas "1Password 7", id: 1333542190
