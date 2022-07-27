@@ -50,10 +50,11 @@ if [ -d $HOMEBREW_PREFIX/opt/findutils/libexec/gnubin ]; then
 fi
 
 # diffutils
-if [ -d /usr/local/opt/diffutils/bin ]; then
-  export PATH="/usr/local/opt/diffutils/bin:$PATH"
-  export MANPATH="/usr/local/opt/diffutils/libexec/gnuman:$MANPATH"
+if [ -d $HOMEBREW_PREFIX/opt/diffutils/bin ]; then
+  export PATH="$HOMEBREW_PREFIX/opt/diffutils/bin:$PATH"
+  export MANPATH="$HOMEBREW_PREFIX/opt/diffutils/share/man:$MANPATH"
 fi
+
 # sed
 if [ -d /usr/local/opt/gnu-sed/bin ]; then
   export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
