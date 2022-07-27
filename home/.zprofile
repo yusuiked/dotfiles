@@ -73,10 +73,11 @@ if [ -d $HOMEBREW_PREFIX/opt/gnu-time/bin ]; then
 fi
 
 # grep
-if [ -d /usr/local/opt/grep/bin ]; then
-  export PATH="/usr/local/opt/grep/libexec/gnubin:$PATH"
-  export MANPATH="/usr/local/opt/grep/libexec/gnuman:$MANPATH"
+if [ -d $HOMEBREW_PREFIX/opt/grep/libexec/gnubin ]; then
+  export PATH="$HOMEBREW_PREFIX/opt/grep/libexec/gnubin:$PATH"
+  export MANPATH="$HOMEBREW_PREFIX/opt/grep/libexec/gnuman:$MANPATH"
 fi
+
 # gzip
 if [ -d /usr/local/opt/gzip/bin ]; then
   export PATH="/usr/local/opt/gzip/bin:$PATH"
