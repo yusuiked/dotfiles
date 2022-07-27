@@ -91,9 +91,10 @@ if [ -d $HOMEBREW_PREFIX/opt/gawk/libexec/gnubin ]; then
 fi
 
 # python
-if [ -d /usr/local/opt/python@3/libexec/bin ]; then
-  export PATH="/usr/local/opt/python@3/libexec/bin:$PATH"
+if [ -d $HOMEBREW_PREFIX/opt/python/libexec/bin ]; then
+  export PATH="$HOMEBREW_PREFIX/opt/python/libexec/bin:$PATH"
 fi
+
 # for diff-highlight with Git
 if [ -e /usr/local/share/git-core/contrib/diff-highlight/diff-highlight ]; then
   export PATH="/usr/local/share/git-core/contrib/diff-highlight:$PATH"
