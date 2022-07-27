@@ -56,9 +56,9 @@ if [ -d $HOMEBREW_PREFIX/opt/diffutils/bin ]; then
 fi
 
 # sed
-if [ -d /usr/local/opt/gnu-sed/bin ]; then
-  export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
-  export MANPATH="/usr/local/opt/gnu-sed/libexec/gnuman:$MANPATH"
+if [ -d $HOMEBREW_PREFIX/opt/gnu-sed/libexec/gnubin ]; then
+  export PATH="$HOMEBREW_PREFIX/opt/gnu-sed/libexec/gnubin:$PATH"
+  export MANPATH="$HOMEBREW_PREFIX/opt/gnu-sed/libexec/gnuman:$MANPATH"
 fi
 # tar
 if [ -d /usr/local/opt/gnu-tar/bin ]; then
