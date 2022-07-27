@@ -42,11 +42,13 @@ if [ -d $HOMEBREW_PREFIX/opt/coreutils/libexec/gnubin ]; then
   export PATH="$HOMEBREW_PREFIX/opt/coreutils/libexec/gnubin:$PATH"
   export MANPATH="$HOMEBREW_PREFIX/opt/coreutils/libexec/gnuman:$MANPATH"
 fi
+
 # findutils
-if [ -d /usr/local/opt/findutils/bin ]; then
-  export PATH="/usr/local/opt/findutils/bin:$PATH"
-  export MANPATH="/usr/local/opt/findutils/libexec/gnuman:$MANPATH"
+if [ -d $HOMEBREW_PREFIX/opt/findutils/libexec/gnubin ]; then
+  export PATH="$HOMEBREW_PREFIX/opt/findutils/libexec/gnubin:$PATH"
+  export MANPATH="$HOMEBREW_PREFIX/opt/findutils/libexec/gnuman:$MANPATH"
 fi
+
 # diffutils
 if [ -d /usr/local/opt/diffutils/bin ]; then
   export PATH="/usr/local/opt/diffutils/bin:$PATH"
