@@ -16,75 +16,92 @@ if [ -x /usr/libexec/path_helper ]; then
   eval `/usr/libexec/path_helper -s`
 fi
 
-# Initialize MANPATH
-if [ -d /usr/local/share/man ]; then
-  export MANPATH="/usr/local/share/man:$MANPATH"
+# Switching with CPU architecture
+if [ "$(uname -m)" = "arm64" ]; then
+  eval "$(/opt/homebrew/bin/brew shellenv)"
+else
+  eval "$(/usr/local/bin/brew shellenv)"
+
+  # Add /usr/local/sbin to PATH.
+  if [ -d /usr/local/sbin ]; then
+    export PATH="/usr/local/sbin:$PATH"
+  fi
+  # Initialize MANPATH
+  if [ -d /usr/local/share/man ]; then
+    export MANPATH="/usr/local/share/man:$MANPATH"
+  fi
 fi
-# Add /usr/local/sbin to PATH.
-if [ -d /usr/local/sbin ]; then
-  export PATH="/usr/local/sbin:$PATH"
-fi
+
 # anyenv
-if [ -d $HOME/.anyenv ]; then
-  export PATH="$HOME/.anyenv/bin:$PATH"
+if [ -x $HOMEBREW_PREFIX/bin/anyenv ]; then
   eval "$(anyenv init -)"
 fi
+
 # coreutils
-if [ -d /usr/local/opt/coreutils/libexec/gnubin ]; then
-  export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
-  export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
-  # alias for ls
-  #alias ls='ls --color'
+if [ -d $HOMEBREW_PREFIX/opt/coreutils/libexec/gnubin ]; then
+  export PATH="$HOMEBREW_PREFIX/opt/coreutils/libexec/gnubin:$PATH"
+  export MANPATH="$HOMEBREW_PREFIX/opt/coreutils/libexec/gnuman:$MANPATH"
 fi
+
 # findutils
-if [ -d /usr/local/opt/findutils/bin ]; then
-  export PATH="/usr/local/opt/findutils/bin:$PATH"
-  export MANPATH="/usr/local/opt/findutils/libexec/gnuman:$MANPATH"
+if [ -d $HOMEBREW_PREFIX/opt/findutils/libexec/gnubin ]; then
+  export PATH="$HOMEBREW_PREFIX/opt/findutils/libexec/gnubin:$PATH"
+  export MANPATH="$HOMEBREW_PREFIX/opt/findutils/libexec/gnuman:$MANPATH"
 fi
+
 # diffutils
-if [ -d /usr/local/opt/diffutils/bin ]; then
-  export PATH="/usr/local/opt/diffutils/bin:$PATH"
-  export MANPATH="/usr/local/opt/diffutils/libexec/gnuman:$MANPATH"
+if [ -d $HOMEBREW_PREFIX/opt/diffutils/bin ]; then
+  export PATH="$HOMEBREW_PREFIX/opt/diffutils/bin:$PATH"
+  export MANPATH="$HOMEBREW_PREFIX/opt/diffutils/share/man:$MANPATH"
 fi
+
 # sed
-if [ -d /usr/local/opt/gnu-sed/bin ]; then
-  export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
-  export MANPATH="/usr/local/opt/gnu-sed/libexec/gnuman:$MANPATH"
+if [ -d $HOMEBREW_PREFIX/opt/gnu-sed/libexec/gnubin ]; then
+  export PATH="$HOMEBREW_PREFIX/opt/gnu-sed/libexec/gnubin:$PATH"
+  export MANPATH="$HOMEBREW_PREFIX/opt/gnu-sed/libexec/gnuman:$MANPATH"
 fi
+
 # tar
-if [ -d /usr/local/opt/gnu-tar/bin ]; then
-  export PATH="/usr/local/opt/gnu-tar/bin:$PATH"
-  export MANPATH="/usr/local/opt/gnu-tar/libexec/gnuman:$MANPATH"
+if [ -d $HOMEBREW_PREFIX/opt/gnu-tar/libexec/gnubin ]; then
+  export PATH="$HOMEBREW_PREFIX/opt/gnu-tar/libexec/gnubin:$PATH"
+  export MANPATH="$HOMEBREW_PREFIX/opt/gnu-tar/libexec/gnuman:$MANPATH"
 fi
+
 # time
-if [ -d /usr/local/opt/gnu-time/bin ]; then
-  export PATH="/usr/local/opt/gnu-time/bin:$PATH"
+if [ -d $HOMEBREW_PREFIX/opt/gnu-time/bin ]; then
+  export PATH="$HOMEBREW_PREFIX/opt/gnu-time/bin:$PATH"
 fi
+
 # grep
-if [ -d /usr/local/opt/grep/bin ]; then
-  export PATH="/usr/local/opt/grep/libexec/gnubin:$PATH"
-  export MANPATH="/usr/local/opt/grep/libexec/gnuman:$MANPATH"
+if [ -d $HOMEBREW_PREFIX/opt/grep/libexec/gnubin ]; then
+  export PATH="$HOMEBREW_PREFIX/opt/grep/libexec/gnubin:$PATH"
+  export MANPATH="$HOMEBREW_PREFIX/opt/grep/libexec/gnuman:$MANPATH"
 fi
+
 # gzip
-if [ -d /usr/local/opt/gzip/bin ]; then
-  export PATH="/usr/local/opt/gzip/bin:$PATH"
-  export MANPATH="/usr/local/opt/gzip/share/man:$MANPATH"
+if [ -d $HOMEBREW_PREFIX/opt/gzip/bin ]; then
+  export PATH="$HOMEBREW_PREFIX/opt/gzip/bin:$PATH"
+  export MANPATH="$HOMEBREW_PREFIX/opt/gzip/share/man:$MANPATH"
 fi
+
 # awk
-if [ -d /usr/local/opt/gawk/bin ]; then
-  export PATH="/usr/local/opt/gawk/bin:$PATH"
-  export MANPATH="/usr/local/opt/gawk/share/man:$MANPATH"
+if [ -d $HOMEBREW_PREFIX/opt/gawk/libexec/gnubin ]; then
+  export PATH="$HOMEBREW_PREFIX/opt/gawk/libexec/gnubin:$PATH"
+  export MANPATH="$HOMEBREW_PREFIX/opt/gawk/libexec/man:$MANPATH"
 fi
+
 # python
-if [ -d /usr/local/opt/python@3/libexec/bin ]; then
-  export PATH="/usr/local/opt/python@3/libexec/bin:$PATH"
+if [ -d $HOMEBREW_PREFIX/opt/python/libexec/bin ]; then
+  export PATH="$HOMEBREW_PREFIX/opt/python/libexec/bin:$PATH"
 fi
+
 # for diff-highlight with Git
-if [ -e /usr/local/share/git-core/contrib/diff-highlight/diff-highlight ]; then
-  export PATH="/usr/local/share/git-core/contrib/diff-highlight:$PATH"
+if [ -x $HOMEBREW_PREFIX/share/git-core/contrib/diff-highlight/diff-highlight ]; then
+  export PATH="$HOMEBREW_PREFIX/share/git-core/contrib/diff-highlight:$PATH"
 fi
+
 # fzf default options
-if [ -x /usr/local/bin/fzf ]; then
+if [ -x $HOMEBREW_PREFIX/bin/fzf ]; then
   export FZF_DEFAULT_OPTS='--height 40% --layout=reverse --border'
 fi
 
@@ -108,10 +125,3 @@ fi
 export GOPATH=$HOME
 export PATH="$GOPATH/bin:$PATH"
 
-##
-# for postgresql 11
-##
-
-if [ -d /usr/local/opt/postgresql@11/bin ]; then
-  export PATH="/usr/local/opt/postgresql@11/bin:$PATH"
-fi

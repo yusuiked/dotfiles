@@ -12,9 +12,11 @@ bindkey \^U backward-kill-line
 # ls
 case ${OSTYPE} in
   freebsd*|darwin*)
-    if [ -f /usr/local/opt/coreutils/libexec/gnubin/ls ]; then
+    if [ -x $HOMEBREW_PREFIX/opt/coreutils/libexec/gnubin/ls ]; then
+      # GNU
       alias ls='ls -F --color=auto'
     else
+      # BSD
       alias ls='ls -GF'
     fi
     ;;
@@ -27,14 +29,16 @@ alias ll='ls -hl'
 alias lla='ll -a'
 alias lld='ll -d'
 alias l.='ls -d .*'
-# vim
-alias vi='vim'
+
 # colordiff
-if [ -f /usr/local/opt/colordiff/bin/colordiff ]; then
+if [ -x $HOMEBREW_PREFIX/opt/colordiff/bin/colordiff ]; then
   alias diff='colordiff -u'
 else
   alias diff='diff -u'
 fi
+
+# vim
+alias vi='vim'
 # tmux
 alias tm='tmux'
 # hub
@@ -165,9 +169,9 @@ WORDCHARS="$WORDCHARS\'\""
 typeset -U path fpath manpath
 
 # powerline
-if $(whence powerline-daemon) > /dev/null; then
+if type powerline-daemon > /dev/null 2>&1; then
   powerline-daemon -q --replace
-  . /usr/local/lib/python3.9/site-packages/powerline/bindings/zsh/powerline.zsh
+  . $HOMEBREW_PREFIX/lib/python3.9/site-packages/powerline/bindings/zsh/powerline.zsh
 fi
 
 #######################
