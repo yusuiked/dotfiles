@@ -101,7 +101,7 @@ if [ -x $HOMEBREW_PREFIX/share/git-core/contrib/diff-highlight/diff-highlight ];
 fi
 
 # fzf default options
-if [ -x /usr/local/bin/fzf ]; then
+if [ -x $HOMEBREW_PREFIX/bin/fzf ]; then
   export FZF_DEFAULT_OPTS='--height 40% --layout=reverse --border'
 fi
 
