@@ -125,10 +125,3 @@ fi
 export GOPATH=$HOME
 export PATH="$GOPATH/bin:$PATH"
 
-##
-# for postgresql 11
-##
-
-if [ -d /usr/local/opt/postgresql@11/bin ]; then
-  export PATH="/usr/local/opt/postgresql@11/bin:$PATH"
-fi
