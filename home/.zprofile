@@ -68,9 +68,10 @@ if [ -d $HOMEBREW_PREFIX/opt/gnu-tar/libexec/gnubin ]; then
 fi
 
 # time
-if [ -d /usr/local/opt/gnu-time/bin ]; then
-  export PATH="/usr/local/opt/gnu-time/bin:$PATH"
+if [ -d $HOMEBREW_PREFIX/opt/gnu-time/bin ]; then
+  export PATH="$HOMEBREW_PREFIX/opt/gnu-time/bin:$PATH"
 fi
+
 # grep
 if [ -d /usr/local/opt/grep/bin ]; then
   export PATH="/usr/local/opt/grep/libexec/gnubin:$PATH"
