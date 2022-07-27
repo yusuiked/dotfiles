@@ -96,9 +96,10 @@ if [ -d $HOMEBREW_PREFIX/opt/python/libexec/bin ]; then
 fi
 
 # for diff-highlight with Git
-if [ -e /usr/local/share/git-core/contrib/diff-highlight/diff-highlight ]; then
-  export PATH="/usr/local/share/git-core/contrib/diff-highlight:$PATH"
+if [ -x $HOMEBREW_PREFIX/share/git-core/contrib/diff-highlight/diff-highlight ]; then
+  export PATH="$HOMEBREW_PREFIX/share/git-core/contrib/diff-highlight:$PATH"
 fi
+
 # fzf default options
 if [ -x /usr/local/bin/fzf ]; then
   export FZF_DEFAULT_OPTS='--height 40% --layout=reverse --border'
