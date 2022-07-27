@@ -85,10 +85,11 @@ if [ -d $HOMEBREW_PREFIX/opt/gzip/bin ]; then
 fi
 
 # awk
-if [ -d /usr/local/opt/gawk/bin ]; then
-  export PATH="/usr/local/opt/gawk/bin:$PATH"
-  export MANPATH="/usr/local/opt/gawk/share/man:$MANPATH"
+if [ -d $HOMEBREW_PREFIX/opt/gawk/libexec/gnubin ]; then
+  export PATH="$HOMEBREW_PREFIX/opt/gawk/libexec/gnubin:$PATH"
+  export MANPATH="$HOMEBREW_PREFIX/opt/gawk/libexec/man:$MANPATH"
 fi
+
 # python
 if [ -d /usr/local/opt/python@3/libexec/bin ]; then
   export PATH="/usr/local/opt/python@3/libexec/bin:$PATH"
