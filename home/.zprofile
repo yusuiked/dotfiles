@@ -79,10 +79,11 @@ if [ -d $HOMEBREW_PREFIX/opt/grep/libexec/gnubin ]; then
 fi
 
 # gzip
-if [ -d /usr/local/opt/gzip/bin ]; then
-  export PATH="/usr/local/opt/gzip/bin:$PATH"
-  export MANPATH="/usr/local/opt/gzip/share/man:$MANPATH"
+if [ -d $HOMEBREW_PREFIX/opt/gzip/bin ]; then
+  export PATH="$HOMEBREW_PREFIX/opt/gzip/bin:$PATH"
+  export MANPATH="$HOMEBREW_PREFIX/opt/gzip/share/man:$MANPATH"
 fi
+
 # awk
 if [ -d /usr/local/opt/gawk/bin ]; then
   export PATH="/usr/local/opt/gawk/bin:$PATH"
