@@ -169,9 +169,9 @@ WORDCHARS="$WORDCHARS\'\""
 typeset -U path fpath manpath
 
 # powerline
-if $(whence powerline-daemon) > /dev/null; then
+if type powerline-daemon > /dev/null 2>&1; then
   powerline-daemon -q --replace
-  . /usr/local/lib/python3.9/site-packages/powerline/bindings/zsh/powerline.zsh
+  . $HOMEBREW_PREFIX/lib/python3.9/site-packages/powerline/bindings/zsh/powerline.zsh
 fi
 
 #######################
