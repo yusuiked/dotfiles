@@ -38,11 +38,9 @@ if [ -x $HOMEBREW_PREFIX/bin/anyenv ]; then
 fi
 
 # coreutils
-if [ -d /usr/local/opt/coreutils/libexec/gnubin ]; then
-  export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
-  export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
-  # alias for ls
-  #alias ls='ls --color'
+if [ -d $HOMEBREW_PREFIX/opt/coreutils/libexec/gnubin ]; then
+  export PATH="$HOMEBREW_PREFIX/opt/coreutils/libexec/gnubin:$PATH"
+  export MANPATH="$HOMEBREW_PREFIX/opt/coreutils/libexec/gnuman:$MANPATH"
 fi
 # findutils
 if [ -d /usr/local/opt/findutils/bin ]; then

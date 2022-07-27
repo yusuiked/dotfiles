@@ -12,9 +12,11 @@ bindkey \^U backward-kill-line
 # ls
 case ${OSTYPE} in
   freebsd*|darwin*)
-    if [ -f /usr/local/opt/coreutils/libexec/gnubin/ls ]; then
+    if [ -x $HOMEBREW_PREFIX/opt/coreutils/libexec/gnubin/ls ]; then
+      # GNU
       alias ls='ls -F --color=auto'
     else
+      # BSD
       alias ls='ls -GF'
     fi
     ;;
