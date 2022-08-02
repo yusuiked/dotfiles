@@ -73,7 +73,7 @@ fi
 
 # less colorize, syntax highglighting
 export LESS='-R -x4'    # ANSI Color Escape Sequence, tab stop
-export LESSOPEN='| /usr/local/bin/src-hilite-lesspipe.sh %s'
+export LESSOPEN="| $HOMEBREW_PREFIX/bin/src-hilite-lesspipe.sh %s"
 
 # zsh-syntax-highlighting (See: https://github.com/zsh-users/zsh-syntax-highlighting)
 if [ -f /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]; then
