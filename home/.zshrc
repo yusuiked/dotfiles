@@ -66,9 +66,9 @@ zle -N anything-repo
 export CLICOLOR=true
 ## for BSD ls
 export LSCOLORS=gxfxcxdxbxegedabagacad
-## for GNU ls (require coreutils and seebi/dircolors-solarized)
-if [ -x $HOMEBREW_PREFIX/opt/coreutils/libexec/gnubin/dircolors ] && [ -f ~/.dircolors ]; then
-  eval $(dircolors ~/.dircolors)
+## for GNU ls (require coreutils and colorscheme file for dircolors)
+if type dircolors > /dev/null 2>&1 && [ -r $HOME/.dircolors ]; then
+  eval $(dircolors $HOME/.dircolors)
 fi
 
 # less colorize, syntax highglighting
