@@ -204,4 +204,4 @@ if [ -d $HOMEBREW_PREFIX/Caskroom/google-cloud-sdk/latest/google-cloud-sdk ]; th
 fi
 
 autoload -U +X bashcompinit && bashcompinit
-complete -o nospace -C /usr/local/bin/terraform terraform
+complete -o nospace -C $HOME/.anyenv/envs/tfenv/bin/terraform terraform
