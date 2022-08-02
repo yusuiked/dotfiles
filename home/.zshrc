@@ -94,9 +94,9 @@ fi
 # Completion settings #
 #######################
 # for zsh-completion
-if type brew &>/dev/null; then
-  fpath=($(brew --prefix)/share/zsh-completions $fpath)
-  fpath=($(brew --prefix)/share/zsh/site-functions $fpath)
+if type brew &>/dev/null 2>&1; then
+  fpath=($HOMEBREW_PREFIX/share/zsh-completions $fpath)
+  fpath=($HOMEBREW_PREFIX/share/zsh/site-functions $fpath)
 fi
 
 # The following lines were added by compinstall
