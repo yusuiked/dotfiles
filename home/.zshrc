@@ -67,7 +67,7 @@ export CLICOLOR=true
 ## for BSD ls
 export LSCOLORS=gxfxcxdxbxegedabagacad
 ## for GNU ls (require coreutils and seebi/dircolors-solarized)
-if [ -f /usr/local/opt/coreutils/libexec/gnubin/dircolors ] && [ -f ~/.dircolors ]; then
+if [ -x $HOMEBREW_PREFIX/opt/coreutils/libexec/gnubin/dircolors ] && [ -f ~/.dircolors ]; then
   eval $(dircolors ~/.dircolors)
 fi
 
