@@ -81,8 +81,8 @@ if [ -f $HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.z
 fi
 
 # zsh-history-substring-search (See: https://github.com/zsh-users/zsh-history-substring-search)
-if [ -f /usr/local/share/zsh-history-substring-search/zsh-history-substring-search.zsh ]; then
-  source /usr/local/share/zsh-history-substring-search/zsh-history-substring-search.zsh
+if [ -f $HOMEBREW_PREFIX/share/zsh-history-substring-search/zsh-history-substring-search.zsh ]; then
+  source $HOMEBREW_PREFIX/share/zsh-history-substring-search/zsh-history-substring-search.zsh
 fi
 
 # zsh-autosuggestions (See: https://github.com/zsh-users/zsh-autosuggestions)
