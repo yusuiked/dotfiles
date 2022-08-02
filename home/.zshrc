@@ -86,8 +86,8 @@ if [ -f $HOMEBREW_PREFIX/share/zsh-history-substring-search/zsh-history-substrin
 fi
 
 # zsh-autosuggestions (See: https://github.com/zsh-users/zsh-autosuggestions)
-if [ -f /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]; then
-  source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+if [ -f $HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]; then
+  source $HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 fi
 
 #######################
