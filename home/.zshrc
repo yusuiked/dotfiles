@@ -76,8 +76,8 @@ export LESS='-R -x4'    # ANSI Color Escape Sequence, tab stop
 export LESSOPEN="| $HOMEBREW_PREFIX/bin/src-hilite-lesspipe.sh %s"
 
 # zsh-syntax-highlighting (See: https://github.com/zsh-users/zsh-syntax-highlighting)
-if [ -f /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]; then
-  source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+if [ -f $HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]; then
+  source $HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 fi
 
 # zsh-history-substring-search (See: https://github.com/zsh-users/zsh-history-substring-search)
