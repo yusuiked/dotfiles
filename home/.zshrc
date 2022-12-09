@@ -43,14 +43,11 @@ alias vi='vim'
 alias tm='tmux'
 # hub
 eval "$(hub alias -s)"
-# ghq, peco, hub (It is likely to be replaced by anyframe)
-#alias repo='cd $(ghq list -p | peco)'
+# ghq, fzf, hub (It is likely to be replaced by anyframe)
 alias repo='cd $(ghq list -p | fzf)'
-#alias ghrepo='hub browse $(ghq list | grep "github.com" | peco | cut -d "/" -f 2,3)'
 alias ghrepo='hub browse $(ghq list | grep "github.com" | fzf | cut -d "/" -f 2,3)'
 bindkey '^]' anything-repo
 function anything-repo() {
-  #local src=$(ghq list --full-path | peco --query "$LBUFFER")
   local src=$(ghq list --full-path | fzf --query "$LBUFFER")
   if [ -n "$src" ]; then
     BUFFER="cd $src"
@@ -186,7 +183,7 @@ function epoch2date() {
 
 # Ref: https://takezoe.hatenablog.com/entry/2017/08/19/164355
 function sbtn() {
-  local TEMPLATE=`curl -s https://github.com/foundweekends/giter8/wiki/giter8-templates | grep "\.g8<" | sed -e "s/</ /g" -e "s/>/ /g" | awk '{print $3}' | peco | head -n1`
+  local TEMPLATE=`curl -s https://github.com/foundweekends/giter8/wiki/giter8-templates | grep "\.g8<" | sed -e "s/</ /g" -e "s/>/ /g" | awk '{print $3}' | fzf | head -n1`
   if [[ -z "$TEMPLATE" ]]; then
     return
   fi
