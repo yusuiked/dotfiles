@@ -30,4 +30,5 @@ samuelcolvin.jinjahtml
 shardulm94.trailing-spaces
 tomoki1207.pdf
 vscodevim.vim
+zhuangtongfa.material-theme
 ziyasal.vscode-open-in-github
