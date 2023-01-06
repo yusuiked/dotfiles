@@ -80,6 +80,7 @@ brew "zsh-syntax-highlighting"
 brew "heroku/brew/heroku"
 brew "sanemat/font/ricty", args: ["with-powerline"]
 brew "vitorgalvao/tiny-scripts/cask-repair"
+cask "1password"
 cask "alfred"
 cask "appcleaner"
 cask "authy"
@@ -114,7 +115,6 @@ cask "tunnelblick"
 cask "vagrant"
 cask "visual-studio-code"
 cask "vlc"
-mas "1Password 7", id: 1333542190
 mas "com.adriangranados.wifiexplorerlite", id: 1408727408
 mas "Day One", id: 1055511498
 mas "GarageBand", id: 682658836
