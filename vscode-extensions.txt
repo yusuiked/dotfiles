@@ -2,6 +2,7 @@ alefragnani.Bookmarks
 Arjun.swagger-viewer
 aws-scripting-guy.cform
 bierner.emojisense
+DavidAnson.vscode-markdownlint
 deerawan.vscode-dash
 donjayamanne.githistory
 EditorConfig.EditorConfig
