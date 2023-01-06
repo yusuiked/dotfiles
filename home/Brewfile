@@ -113,7 +113,6 @@ cask "microsoft-remote-desktop"
 cask "monitorcontrol"
 cask "qfinder-pro"
 cask "rectangle"
-cask "toggl-track"
 cask "tunnelblick"
 cask "vagrant"
 cask "visual-studio-code"
@@ -127,7 +126,6 @@ mas "LINE", id: 539883307
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
 mas "PhotoScape X", id: 929507092
-mas "ReceiptKeeper", id: 413449473
 mas "Seashore", id: 1448648921
 mas "Skitch", id: 425955336
 mas "Slack", id: 803453959
