@@ -177,7 +177,7 @@ fi
 # powerline
 if type powerline-daemon > /dev/null 2>&1; then
   powerline-daemon -q --replace
-  . $HOMEBREW_PREFIX/lib/python3.9/site-packages/powerline/bindings/zsh/powerline.zsh
+  . $HOMEBREW_PREFIX/lib/python3.10/site-packages/powerline/bindings/zsh/powerline.zsh
 fi
 
 #######################
