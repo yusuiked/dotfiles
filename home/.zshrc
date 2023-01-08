@@ -152,11 +152,6 @@ colors
 #######################
 # miscellaneous       #
 #######################
-# direnv
-if type direnv > /dev/null 2>&1; then
-  eval "$(direnv hook zsh)"
-fi
-
 # Set word break on CLI
 
 autoload -Uz select-word-style
@@ -167,6 +162,17 @@ zstyle ':zle:*' word-style unspecified
 WORDCHARS="$WORDCHARS\'\""
 # Elimination of duplicate PATH
 typeset -U path fpath manpath
+
+# direnv
+if type direnv > /dev/null 2>&1; then
+  eval "$(direnv hook zsh)"
+fi
+
+# homeshick
+if [[ -x $HOMEBREW_PREFIX/bin/homeshick ]]; then
+  export HOMESHICK_DIR=$HOMEBREW_PREFIX/opt/homeshick
+  source $HOMEBREW_PREFIX/opt/homeshick/homeshick.sh
+fi
 
 # powerline
 if type powerline-daemon > /dev/null 2>&1; then
