@@ -65,7 +65,7 @@ export CLICOLOR=true
 ## for BSD ls
 export LSCOLORS=gxfxcxdxbxegedabagacad
 ## for GNU ls (require coreutils and colorscheme file for dircolors)
-if type dircolors > /dev/null 2>&1 && [ -r $HOME/.dircolors ]; then
+if type dircolors &>/dev/null && [ -r $HOME/.dircolors ]; then
   eval $(dircolors $HOME/.dircolors)
 fi
 
@@ -92,7 +92,7 @@ fi
 # Completion settings #
 #######################
 # for zsh-completion
-if type brew &>/dev/null 2>&1; then
+if type brew &>/dev/null; then
   fpath=($HOMEBREW_PREFIX/share/zsh-completions $fpath)
   fpath=($HOMEBREW_PREFIX/share/zsh/site-functions $fpath)
 fi
@@ -164,7 +164,7 @@ WORDCHARS="$WORDCHARS\'\""
 typeset -U path fpath manpath
 
 # direnv
-if type direnv > /dev/null 2>&1; then
+if type direnv &>/dev/null; then
   eval "$(direnv hook zsh)"
 fi
 
@@ -175,7 +175,7 @@ if [[ -x $HOMEBREW_PREFIX/bin/homeshick ]]; then
 fi
 
 # powerline
-if type powerline-daemon > /dev/null 2>&1; then
+if type powerline-daemon &>/dev/null; then
   powerline-daemon -q --replace
   . $HOMEBREW_PREFIX/lib/python3.10/site-packages/powerline/bindings/zsh/powerline.zsh
 fi
