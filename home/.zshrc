@@ -41,14 +41,15 @@ fi
 alias vi='vim'
 # tmux
 alias tm='tmux'
-# hub
-eval "$(hub alias -s)"
-# ghq, fzf, hub (It is likely to be replaced by anyframe)
-alias repo='cd $(ghq list -p | fzf)'
-alias ghrepo='hub browse $(ghq list | grep "github.com" | fzf | cut -d "/" -f 2,3)'
+
+# for github navigation
+if [[ -x $HOMEBREW_PREFIX/bin/fzf && -x $HOMEBREW_PREFIX/bin/ghq && -x $HOMEBREW_PREFIX/bin/gh ]]; then
+  alias repo='cd $(ghq list -p | fzf)'
+  alias ghrepo='gh browse -R $(ghq list | grep "github.com" | fzf | cut -d "/" -f 2,3)'
+fi
 bindkey '^]' anything-repo
 function anything-repo() {
-  local src=$(ghq list --full-path | fzf --query "$LBUFFER")
+  local src=$(ghq list -p | fzf --query "$LBUFFER")
   if [ -n "$src" ]; then
     BUFFER="cd $src"
     zle accept-line
