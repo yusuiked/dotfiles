@@ -9,26 +9,37 @@ bindkey \^U backward-kill-line
 #######################
 # Alias settings      #
 #######################
-# ls
-case ${OSTYPE} in
-  freebsd*|darwin*)
-    if [ -x $HOMEBREW_PREFIX/opt/coreutils/libexec/gnubin/ls ]; then
-      # GNU
+# Prefer exa, If not available, use ls to set alias.
+if type exa &>/dev/null; then
+  alias ls='exa -F --color=auto --icons'
+  alias la='exa -aF --color=auto --icons'
+  alias ll='exa -hlF --git --color=auto --icons'
+  alias lla='exa -ahlF --git --color=auto --icons'
+  alias lld='exa -dhlF --color=auto --icons'
+  alias ll.='exa -dhlF --git --color=auto --icons .*'
+  alias lt='exa -FTL 2 --color=auto --icons'
+  alias llt='exa -hlFTL 2 --git --color=auto --icons'
+else
+  case ${OSTYPE} in
+    freebsd*|darwin*)
+      if [ -x $HOMEBREW_PREFIX/opt/coreutils/libexec/gnubin/ls ]; then
+        # GNU
+        alias ls='ls -F --color=auto'
+      else
+        # BSD
+        alias ls='ls -GF'
+      fi
+      ;;
+    linux*)
       alias ls='ls -F --color=auto'
-    else
-      # BSD
-      alias ls='ls -GF'
-    fi
-    ;;
-  linux*)
-    alias ls='ls -F --color=auto'
-    ;;
-esac
-alias la='ls -a'
-alias ll='ls -hl'
-alias lla='ll -a'
-alias lld='ll -d'
-alias l.='ls -d .*'
+      ;;
+  esac
+  alias la='ls -a'
+  alias ll='ls -hl'
+  alias lla='ll -a'
+  alias lld='ll -d'
+  alias ll.='ls -d .*'
+fi
 
 # colordiff
 if [ -x $HOMEBREW_PREFIX/opt/colordiff/bin/colordiff ]; then
