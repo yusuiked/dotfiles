@@ -5,6 +5,17 @@
 bindkey -e
 # End of lines configured by zsh-newuser-install
 bindkey \^U backward-kill-line
+# Keybinding to fuzzy search the github repo and change dir to it
+function anything-repo() {
+  local src=$(ghq list -p | fzf --query "$LBUFFER")
+  if [ -n "$src" ]; then
+    BUFFER="cd $src"
+    zle accept-line
+  fi
+  zle -R -c
+}
+zle -N anything-repo
+bindkey '^]' anything-repo
 
 #######################
 # Alias settings      #
@@ -58,16 +69,6 @@ if [[ -x $HOMEBREW_PREFIX/bin/fzf && -x $HOMEBREW_PREFIX/bin/ghq && -x $HOMEBREW
   alias repo='cd $(ghq list -p | fzf)'
   alias ghrepo='gh browse -R $(ghq list | grep "github.com" | fzf | cut -d "/" -f 2,3)'
 fi
-bindkey '^]' anything-repo
-function anything-repo() {
-  local src=$(ghq list -p | fzf --query "$LBUFFER")
-  if [ -n "$src" ]; then
-    BUFFER="cd $src"
-    zle accept-line
-  fi
-  zle -R -c
-}
-zle -N anything-repo
 
 #######################
 # Terminal appearance #
