@@ -130,12 +130,11 @@ bindkey -M menuselect 'j' vi-down-line-or-history
 bindkey -M menuselect 'k' vi-up-line-or-history
 bindkey -M menuselect 'l' vi-forward-char
 
-# Completion candidate color setting
-[ -n "${LS_COLORS}" ] && zstyle ':completion:*' list-colors "${LS_COLORS}"
-
 #######################
 # Prompt appearance   #
 #######################
+# Completion candidate color setting
+[ -n "${LS_COLORS}" ] && zstyle ':completion:*' list-colors "${LS_COLORS}"
 # Colorize prompt
 autoload -Uz colors
 colors
@@ -144,7 +143,6 @@ colors
 # miscellaneous       #
 #######################
 # Set word break on CLI
-
 autoload -Uz select-word-style
 select-word-style default
 #zstyle ':zle:*' word-chars " _-./;@"
