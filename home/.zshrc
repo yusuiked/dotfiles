@@ -2,7 +2,7 @@
 # Completion settings #
 #######################
 # for zsh-completion
-if type brew &>/dev/null; then
+if type brew >/dev/null 2>&1; then
   fpath=($HOMEBREW_PREFIX/share/zsh-completions $fpath)
   fpath=($HOMEBREW_PREFIX/share/zsh/site-functions $fpath)
 fi
@@ -97,7 +97,7 @@ fi
 # Application setup   #
 #######################
 # direnv
-if type direnv &>/dev/null; then
+if type direnv >/dev/null 2>&1; then
   eval "$(direnv hook zsh)"
 fi
 
@@ -115,7 +115,7 @@ export SDKMAN_DIR="$HOME/.sdkman"
 # Alias settings      #
 #######################
 # Prefer exa, If not available, use ls to set alias.
-if type exa &>/dev/null; then
+if type exa >/dev/null 2>&1; then
   alias ls='exa -F --color=auto --icons'
   alias la='exa -aF --color=auto --icons'
   alias ll='exa -hlF --git --color=auto --icons'
@@ -147,7 +147,7 @@ else
 fi
 
 # Use `bat` instead of cat,less
-if type bat &>/dev/null; then
+if type bat >/dev/null 2>&1; then
   alias cat='bat --paging=never'
   alias less='bat'
 fi
