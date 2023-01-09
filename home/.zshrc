@@ -75,10 +75,6 @@ if type starship >/dev/null 2>&1; then
   eval "$(starship init zsh)"
 fi
 
-# less colorize, syntax highglighting
-export LESS='-R -x4'    # ANSI Color Escape Sequence, tab stop
-export LESSOPEN="| $HOMEBREW_PREFIX/bin/src-hilite-lesspipe.sh %s"
-
 #######################
 # zsh plugins         #
 #######################
@@ -148,6 +144,12 @@ else
   alias lla='ll -a'
   alias lld='ll -d'
   alias ll.='ls -d .*'
+fi
+
+# Use `bat` instead of cat,less
+if type bat &>/dev/null; then
+  alias cat='bat --paging=never'
+  alias less='bat'
 fi
 
 # colordiff
