@@ -105,6 +105,15 @@ if type brew &>/dev/null; then
   fpath=($HOMEBREW_PREFIX/share/zsh/site-functions $fpath)
 fi
 
+# for Google Cloud Platform SDK completion
+if [ -d $HOMEBREW_PREFIX/Caskroom/google-cloud-sdk/latest/google-cloud-sdk ]; then
+  source "$HOMEBREW_PREFIX/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc"
+  source "$HOMEBREW_PREFIX/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
+fi
+
+# Elimination of duplicate PATH
+typeset -U path fpath manpath
+
 # The following lines were added by compinstall
 zstyle :compinstall filename "$HOME/.zshrc"
 
@@ -146,8 +155,6 @@ select-word-style default
 zstyle ':zle:*' word-chars " ;@\"\'"
 zstyle ':zle:*' word-style unspecified
 WORDCHARS="$WORDCHARS\'\""
-# Elimination of duplicate PATH
-typeset -U path fpath manpath
 
 # direnv
 if type direnv &>/dev/null; then
@@ -167,12 +174,6 @@ fi
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
-
-# for Google Cloud Platform SDK completion
-if [ -d $HOMEBREW_PREFIX/Caskroom/google-cloud-sdk/latest/google-cloud-sdk ]; then
-  source "$HOMEBREW_PREFIX/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc"
-  source "$HOMEBREW_PREFIX/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
-fi
 
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C $HOME/.anyenv/envs/tfenv/bin/terraform terraform
