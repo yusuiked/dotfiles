@@ -1,3 +1,37 @@
+#######################
+# Completion settings #
+#######################
+# for zsh-completion
+if type brew &>/dev/null; then
+  fpath=($HOMEBREW_PREFIX/share/zsh-completions $fpath)
+  fpath=($HOMEBREW_PREFIX/share/zsh/site-functions $fpath)
+fi
+
+# for Google Cloud Platform SDK completion
+if [ -d $HOMEBREW_PREFIX/Caskroom/google-cloud-sdk/latest/google-cloud-sdk ]; then
+  source "$HOMEBREW_PREFIX/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc"
+  source "$HOMEBREW_PREFIX/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
+fi
+
+# Elimination of duplicate PATH
+typeset -U path fpath manpath
+
+# The following lines were added by compinstall
+zstyle :compinstall filename "$HOME/.zshrc"
+
+autoload -Uz compinit
+compinit
+# End of lines added by compinstall
+
+# Interactive refinement of completion candidates
+# https://qiita.com/ToruIwashita/items/5cfa382e9ae2bd0502be
+zstyle ':completion:*' menu select interactive
+zstyle ':completion:*:default' menu select=2
+setopt menu_complete
+# Enhance completion
+setopt auto_param_slash
+setopt mark_dirs
+
 # Lines configured by zsh-newuser-install
 #######################
 # Key binding         #
@@ -5,6 +39,13 @@
 bindkey -e
 # End of lines configured by zsh-newuser-install
 bindkey \^U backward-kill-line
+# Move completion menu with Vim keybind
+# https://qiita.com/ToruIwashita/items/5cfa382e9ae2bd0502be
+zmodload zsh/complist
+bindkey -M menuselect 'h' vi-backward-char
+bindkey -M menuselect 'j' vi-down-line-or-history
+bindkey -M menuselect 'k' vi-up-line-or-history
+bindkey -M menuselect 'l' vi-forward-char
 # Keybinding to fuzzy search the github repo and change dir to it
 function anything-repo() {
   local src=$(ghq list -p | fzf --query "$LBUFFER")
@@ -16,6 +57,63 @@ function anything-repo() {
 }
 zle -N anything-repo
 bindkey '^]' anything-repo
+
+#######################
+# Terminal appearance #
+#######################
+export CLICOLOR=true
+# for BSD ls
+export LSCOLORS=gxfxcxdxbxegedabagacad
+# Completion candidate color setting
+[ -n "${LS_COLORS}" ] && zstyle ':completion:*' list-colors "${LS_COLORS}"
+# Colorize prompt
+autoload -Uz colors
+colors
+
+# prompt customization by starship
+if type starship >/dev/null 2>&1; then
+  eval "$(starship init zsh)"
+fi
+
+# less colorize, syntax highglighting
+export LESS='-R -x4'    # ANSI Color Escape Sequence, tab stop
+export LESSOPEN="| $HOMEBREW_PREFIX/bin/src-hilite-lesspipe.sh %s"
+
+#######################
+# zsh plugins         #
+#######################
+# zsh-syntax-highlighting (See: https://github.com/zsh-users/zsh-syntax-highlighting)
+if [ -f $HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]; then
+  source $HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+fi
+
+# zsh-history-substring-search (See: https://github.com/zsh-users/zsh-history-substring-search)
+if [ -f $HOMEBREW_PREFIX/share/zsh-history-substring-search/zsh-history-substring-search.zsh ]; then
+  source $HOMEBREW_PREFIX/share/zsh-history-substring-search/zsh-history-substring-search.zsh
+fi
+
+# zsh-autosuggestions (See: https://github.com/zsh-users/zsh-autosuggestions)
+if [ -f $HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]; then
+  source $HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+fi
+
+#######################
+# Application setup   #
+#######################
+# direnv
+if type direnv &>/dev/null; then
+  eval "$(direnv hook zsh)"
+fi
+
+# homeshick
+if [[ -x $HOMEBREW_PREFIX/bin/homeshick ]]; then
+  export HOMESHICK_DIR=$HOMEBREW_PREFIX/opt/homeshick
+  source $HOMEBREW_PREFIX/opt/homeshick/homeshick.sh
+fi
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
 #######################
 # Alias settings      #
@@ -71,82 +169,7 @@ if [[ -x $HOMEBREW_PREFIX/bin/fzf && -x $HOMEBREW_PREFIX/bin/ghq && -x $HOMEBREW
 fi
 
 #######################
-# Terminal appearance #
-#######################
-export CLICOLOR=true
-## for BSD ls
-export LSCOLORS=gxfxcxdxbxegedabagacad
-
-# less colorize, syntax highglighting
-export LESS='-R -x4'    # ANSI Color Escape Sequence, tab stop
-export LESSOPEN="| $HOMEBREW_PREFIX/bin/src-hilite-lesspipe.sh %s"
-
-# zsh-syntax-highlighting (See: https://github.com/zsh-users/zsh-syntax-highlighting)
-if [ -f $HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]; then
-  source $HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-fi
-
-# zsh-history-substring-search (See: https://github.com/zsh-users/zsh-history-substring-search)
-if [ -f $HOMEBREW_PREFIX/share/zsh-history-substring-search/zsh-history-substring-search.zsh ]; then
-  source $HOMEBREW_PREFIX/share/zsh-history-substring-search/zsh-history-substring-search.zsh
-fi
-
-# zsh-autosuggestions (See: https://github.com/zsh-users/zsh-autosuggestions)
-if [ -f $HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]; then
-  source $HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-fi
-
-#######################
-# Completion settings #
-#######################
-# for zsh-completion
-if type brew &>/dev/null; then
-  fpath=($HOMEBREW_PREFIX/share/zsh-completions $fpath)
-  fpath=($HOMEBREW_PREFIX/share/zsh/site-functions $fpath)
-fi
-
-# for Google Cloud Platform SDK completion
-if [ -d $HOMEBREW_PREFIX/Caskroom/google-cloud-sdk/latest/google-cloud-sdk ]; then
-  source "$HOMEBREW_PREFIX/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc"
-  source "$HOMEBREW_PREFIX/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
-fi
-
-# Elimination of duplicate PATH
-typeset -U path fpath manpath
-
-# The following lines were added by compinstall
-zstyle :compinstall filename "$HOME/.zshrc"
-
-autoload -Uz compinit
-compinit
-# End of lines added by compinstall
-
-# Interactive refinement of completion candidates
-# https://qiita.com/ToruIwashita/items/5cfa382e9ae2bd0502be
-zstyle ':completion:*' menu select interactive
-zstyle ':completion:*:default' menu select=2
-setopt menu_complete
-# Enhance completion
-setopt auto_param_slash
-setopt mark_dirs
-# Move completion menu with Vim keybind
-zmodload zsh/complist
-bindkey -M menuselect 'h' vi-backward-char
-bindkey -M menuselect 'j' vi-down-line-or-history
-bindkey -M menuselect 'k' vi-up-line-or-history
-bindkey -M menuselect 'l' vi-forward-char
-
-#######################
-# Prompt appearance   #
-#######################
-# Completion candidate color setting
-[ -n "${LS_COLORS}" ] && zstyle ':completion:*' list-colors "${LS_COLORS}"
-# Colorize prompt
-autoload -Uz colors
-colors
-
-#######################
-# miscellaneous       #
+# misc config         #
 #######################
 # Set word break on CLI
 autoload -Uz select-word-style
@@ -156,27 +179,10 @@ zstyle ':zle:*' word-chars " ;@\"\'"
 zstyle ':zle:*' word-style unspecified
 WORDCHARS="$WORDCHARS\'\""
 
-# direnv
-if type direnv &>/dev/null; then
-  eval "$(direnv hook zsh)"
-fi
-
-# homeshick
-if [[ -x $HOMEBREW_PREFIX/bin/homeshick ]]; then
-  export HOMESHICK_DIR=$HOMEBREW_PREFIX/opt/homeshick
-  source $HOMEBREW_PREFIX/opt/homeshick/homeshick.sh
-fi
-
 #######################
 # custom function     #
 #######################
 
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="$HOME/.sdkman"
-[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
-
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C $HOME/.anyenv/envs/tfenv/bin/terraform terraform
-
-eval "$(starship init zsh)"
 
