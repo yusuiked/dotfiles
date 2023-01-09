@@ -189,6 +189,8 @@ WORDCHARS="$WORDCHARS\'\""
 #######################
 # utility function    #
 #######################
+# grep the JSON
+function jgrep() { gron | grep $* | gron -u }
 
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C $HOME/.anyenv/envs/tfenv/bin/terraform terraform
