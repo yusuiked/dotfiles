@@ -152,13 +152,6 @@ if type bat >/dev/null 2>&1; then
   alias less='bat'
 fi
 
-# colordiff
-if [ -x $HOMEBREW_PREFIX/opt/colordiff/bin/colordiff ]; then
-  alias diff='colordiff -u'
-else
-  alias diff='diff -u'
-fi
-
 # Use trash instead of rm
 if type trash >/dev/null 2>&1; then
   alias rm='trash -F'
