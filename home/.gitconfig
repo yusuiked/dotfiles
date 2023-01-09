@@ -18,14 +18,15 @@
 	hist = log --pretty=\"format:%C(White)%ad %C(yellow)%h %C(Red)(%an): %C(White)%s\" --graph --date=short
 	ig = "!gi() { curl -L -s https://www.gitignore.io/api/$@ ;}; gi"
 	cbr = "!f() { git branch --merged | grep -E -v '^\\*|\\<develop\\>|\\<master\\>|\\<main\\>' | xargs git branch -d ;}; f"
-[pager]
-	log = diff-highlight | less
-	show = diff-highlight | less
-	diff = diff-highlight | less
 [interactive]
 	diffFilter = delta --color-only --features=interactive
+[add.interactive]
+	useBuiltin = false
 [delta]
+	# See: https://zenn.dev/arkbig/articles/terminal-2022_e6b10a37281b21
 	features = decorations
+    navigate = true
+    side-by-side = true
 [delta "interactive"]
 	keep-plus-minus-markers = false
 [delta "decorations"]
@@ -36,8 +37,11 @@
 	hunk-header-file-style = red
 	hunk-header-line-number-style = "#067a00"
 	hunk-header-style = file line-number syntax
+[merge]
+	conflictstyle = diff3
 [diff]
 	compactionHeuristic = true
+    colorMoved = default
 [ghq]
 	root = ~/src
 [filter "lfs"]
