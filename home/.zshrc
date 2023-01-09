@@ -130,7 +130,6 @@ bindkey -M menuselect 'j' vi-down-line-or-history
 bindkey -M menuselect 'k' vi-up-line-or-history
 bindkey -M menuselect 'l' vi-forward-char
 
-
 # Completion candidate color setting
 [ -n "${LS_COLORS}" ] && zstyle ':completion:*' list-colors "${LS_COLORS}"
 
@@ -140,25 +139,6 @@ bindkey -M menuselect 'l' vi-forward-char
 # Colorize prompt
 autoload -Uz colors
 colors
-
-# Git prompt customize
-
-# In order to substitute in powerline-gitstatus, the following has been commented out.
-# https://github.com/jaspernbrouwer/powerline-gitstatus
-# ## using git-prompt
-# source /usr/local/etc/bash_completion.d/git-prompt.sh
-# setopt prompt_subst
-# setopt transient_rprompt
-# precmd () {
-#   RPROMPT="%F{red}$(__git_ps1)%f"
-# }
-# GIT_PS1_SHOWDIRTYSTATE=true
-# GIT_PS1_SHOWSTASHSTATE=true
-# GIT_PS1_SHOWUNTRACKEDFILES=true
-# GIT_PS1_SHOWUPSTREAM="auto"
-# GIT_PS1_SHOWCOLORHINTS=true
-#
-# PROMPT="[%F{green}%n@%m%f %F{blue}%~%f]%# "
 
 #######################
 # miscellaneous       #
@@ -184,12 +164,6 @@ if [[ -x $HOMEBREW_PREFIX/bin/homeshick ]]; then
   export HOMESHICK_DIR=$HOMEBREW_PREFIX/opt/homeshick
   source $HOMEBREW_PREFIX/opt/homeshick/homeshick.sh
 fi
-
-# powerline
-#if type powerline-daemon &>/dev/null; then
-#  powerline-daemon -q --replace
-#  . $HOMEBREW_PREFIX/lib/python3.10/site-packages/powerline/bindings/zsh/powerline.zsh
-#fi
 
 #######################
 # custom function     #
@@ -222,3 +196,4 @@ autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C $HOME/.anyenv/envs/tfenv/bin/terraform terraform
 
 eval "$(starship init zsh)"
+
