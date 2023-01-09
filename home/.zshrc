@@ -168,19 +168,6 @@ fi
 #######################
 # custom function     #
 #######################
-# Ref: https://blog.shibayu36.org/entry/2019/01/09/193000
-function epoch2date() {
-  date --date="@$1" +%Y-%m-%dT%H:%M:%S%z
-}
-
-# Ref: https://takezoe.hatenablog.com/entry/2017/08/19/164355
-function sbtn() {
-  local TEMPLATE=`curl -s https://github.com/foundweekends/giter8/wiki/giter8-templates | grep "\.g8<" | sed -e "s/</ /g" -e "s/>/ /g" | awk '{print $3}' | fzf | head -n1`
-  if [[ -z "$TEMPLATE" ]]; then
-    return
-  fi
-  sbt new $TEMPLATE
-}
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
