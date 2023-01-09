@@ -152,6 +152,11 @@ if type bat >/dev/null 2>&1; then
   alias less='bat'
 fi
 
+# Use `ripgrep` instead of normal grep
+if type rg >/dev/null 2>&1; then
+  alias grep='rg -S'
+fi
+
 # Use trash instead of rm
 if type trash >/dev/null 2>&1; then
   alias rm='trash -F'
