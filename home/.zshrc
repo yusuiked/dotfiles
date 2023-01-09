@@ -186,10 +186,10 @@ if [[ -x $HOMEBREW_PREFIX/bin/homeshick ]]; then
 fi
 
 # powerline
-if type powerline-daemon &>/dev/null; then
-  powerline-daemon -q --replace
-  . $HOMEBREW_PREFIX/lib/python3.10/site-packages/powerline/bindings/zsh/powerline.zsh
-fi
+#if type powerline-daemon &>/dev/null; then
+#  powerline-daemon -q --replace
+#  . $HOMEBREW_PREFIX/lib/python3.10/site-packages/powerline/bindings/zsh/powerline.zsh
+#fi
 
 #######################
 # custom function     #
@@ -220,3 +220,5 @@ fi
 
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C $HOME/.anyenv/envs/tfenv/bin/terraform terraform
+
+eval "$(starship init zsh)"
