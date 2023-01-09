@@ -180,7 +180,7 @@ zstyle ':zle:*' word-style unspecified
 WORDCHARS="$WORDCHARS\'\""
 
 #######################
-# custom function     #
+# utility function    #
 #######################
 
 autoload -U +X bashcompinit && bashcompinit
