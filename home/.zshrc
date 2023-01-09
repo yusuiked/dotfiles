@@ -75,10 +75,6 @@ zle -N anything-repo
 export CLICOLOR=true
 ## for BSD ls
 export LSCOLORS=gxfxcxdxbxegedabagacad
-## for GNU ls (require coreutils and colorscheme file for dircolors)
-if type dircolors &>/dev/null && [ -r $HOME/.dircolors ]; then
-  eval $(dircolors $HOME/.dircolors)
-fi
 
 # less colorize, syntax highglighting
 export LESS='-R -x4'    # ANSI Color Escape Sequence, tab stop
