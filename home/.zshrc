@@ -159,6 +159,11 @@ else
   alias diff='diff -u'
 fi
 
+# Use trash instead of rm
+if type trash >/dev/null 2>&1; then
+  alias rm='trash -F'
+fi
+
 # vim
 alias vi='vim'
 # tmux
