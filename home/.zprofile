@@ -120,3 +120,7 @@ fi
 export GOPATH=$HOME
 export PATH="$GOPATH/bin:$PATH"
 
+# small tricks for salak
+export PERL_CPANM_OPT="--local-lib=~/local/lib/perl5"
+export PERL5LIB=$HOME/local/lib/perl5/lib/perl5:$PERL5LIB;
+
