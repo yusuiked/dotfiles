@@ -8,6 +8,18 @@
 	excludesfile = ~/.gitignore_global
 	attributesfile = ~/.gitattributes_global
 	pager = delta
+[init]
+	defaultBranch = main
+[includeIf "gitdir:~/src/github.com/heyinc/"]
+	path = ~/.gitconfig_office
+[pull]
+	ff = only
+	rebase = false
+[merge]
+	conflictstyle = diff3
+[diff]
+	compactionHeuristic = true
+    colorMoved = default
 [alias]
 	ci = commit
 	co = checkout
@@ -38,11 +50,6 @@
 	hunk-header-file-style = red
 	hunk-header-line-number-style = "#067a00"
 	hunk-header-style = file line-number syntax
-[merge]
-	conflictstyle = diff3
-[diff]
-	compactionHeuristic = true
-    colorMoved = default
 [ghq]
 	root = ~/src
 [filter "lfs"]
@@ -50,11 +57,6 @@
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
-[includeIf "gitdir:~/src/github.com/heyinc/"]
-	path = ~/.gitconfig_office
-[pull]
-	ff = only
-	rebase = false
 [secrets]
 	providers = git secrets --aws-provider
 	patterns = (A3T[A-Z0-9]|AKIA|AGPA|AIDA|AROA|AIPA|ANPA|ANVA|ASIA)[A-Z0-9]{16}
