@@ -104,7 +104,7 @@ fi
 
 # asdf
 if type asdf >/dev/null 2>&1; then
-  . /opt/homebrew/opt/asdf/libexec/asdf.sh
+  . $HOMEBREW_PREFIX/opt/asdf/libexec/asdf.sh
 fi
 
 # direnv
