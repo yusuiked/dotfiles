@@ -96,15 +96,15 @@ fi
 #######################
 # Application setup   #
 #######################
-# direnv
-if type direnv >/dev/null 2>&1; then
-  eval "$(direnv hook zsh)"
-fi
-
 # homeshick
 if [[ -x $HOMEBREW_PREFIX/bin/homeshick ]]; then
   export HOMESHICK_DIR=$HOMEBREW_PREFIX/opt/homeshick
   source $HOMEBREW_PREFIX/opt/homeshick/homeshick.sh
+fi
+
+# direnv
+if type direnv >/dev/null 2>&1; then
+  eval "$(direnv hook zsh)"
 fi
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
