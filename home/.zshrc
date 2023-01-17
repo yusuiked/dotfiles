@@ -102,6 +102,11 @@ if [[ -x $HOMEBREW_PREFIX/bin/homeshick ]]; then
   source $HOMEBREW_PREFIX/opt/homeshick/homeshick.sh
 fi
 
+# asdf
+if type asdf >/dev/null 2>&1; then
+  . /opt/homebrew/opt/asdf/libexec/asdf.sh
+fi
+
 # direnv
 if type direnv >/dev/null 2>&1; then
   eval "$(direnv hook zsh)"
