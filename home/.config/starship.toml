@@ -5,6 +5,7 @@ $time\
 $line_break\
 $character
 """
+command_timeout = 750
 
 [aws]
 symbol = "  "
