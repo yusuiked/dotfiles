@@ -195,3 +195,6 @@ WORDCHARS="$WORDCHARS\'\""
 # grep the JSON
 function jgrep() { gron | grep $* | gron -u }
 
+if [[ -r $HOME/.zshrc.local ]]; then
+  source $HOME/.zshrc.local
+fi
