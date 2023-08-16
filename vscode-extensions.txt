@@ -1,6 +1,7 @@
 alefragnani.Bookmarks
 aws-scripting-guy.cform
 bierner.emojisense
+bierner.markdown-mermaid
 bufbuild.vscode-buf
 DavidAnson.vscode-markdownlint
 deerawan.vscode-dash
@@ -8,7 +9,9 @@ donjayamanne.githistory
 EditorConfig.EditorConfig
 emilast.LogFileHighlighter
 esbenp.prettier-vscode
+github.vscode-github-actions
 golang.go
+GraphQL.vscode-graphql-syntax
 Gruntfuggly.todo-tree
 hashicorp.terraform
 humao.rest-client
