@@ -15,7 +15,6 @@ humao.rest-client
 IBM.output-colorizer
 jebbs.plantuml
 jsynowiec.vscode-insertdatestring
-karigari.chat
 marp-team.marp-vscode
 mechatroner.rainbow-csv
 ms-azuretools.vscode-docker
