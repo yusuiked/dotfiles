@@ -22,7 +22,6 @@ ms-azuretools.vscode-docker
 MS-CEINTL.vscode-language-pack-ja
 ms-vscode-remote.remote-containers
 ms-vsliveshare.vsliveshare
-ms-vsliveshare.vsliveshare-audio
 oderwat.indent-rainbow
 redhat.vscode-yaml
 ritwickdey.LiveServer
