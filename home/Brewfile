@@ -133,6 +133,7 @@ mas "紀伊國屋書店Kinoppy", id: 572547904
 vscode "alefragnani.Bookmarks"
 vscode "bierner.emojisense"
 vscode "bierner.markdown-mermaid"
+vscode "csholmq.excel-to-markdown-table"
 vscode "DavidAnson.vscode-markdownlint"
 vscode "dbaeumer.vscode-eslint"
 vscode "deerawan.vscode-dash"
