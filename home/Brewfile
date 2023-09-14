@@ -131,7 +131,6 @@ mas "Spark", id: 1176895641
 mas "Virus Scanner Plus", id: 595374522
 mas "紀伊國屋書店Kinoppy", id: 572547904
 vscode "alefragnani.Bookmarks"
-vscode "aws-scripting-guy.cform"
 vscode "bierner.emojisense"
 vscode "bierner.markdown-mermaid"
 vscode "DavidAnson.vscode-markdownlint"
