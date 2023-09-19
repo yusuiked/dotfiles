@@ -19,8 +19,6 @@ brew "bash-completion"
 brew "bat"
 brew "icu4c"
 brew "boost"
-brew "glib"
-brew "pcre"
 brew "cloc"
 brew "cpanminus"
 brew "ctop"
@@ -116,7 +114,6 @@ cask "karabiner-elements"
 cask "microsoft-remote-desktop"
 cask "monitorcontrol"
 cask "rectangle"
-cask "todoist"
 cask "tunnelblick"
 cask "visual-studio-code"
 mas "com.adriangranados.wifiexplorerlite", id: 1408727408
@@ -127,8 +124,8 @@ mas "Keynote", id: 409183694
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
 mas "Skitch", id: 425955336
-mas "Slack", id: 803453959
 mas "Todoist", id: 585829637
+mas "Xcode", id: 497799835
 mas "紀伊國屋書店Kinoppy", id: 572547904
 vscode "alefragnani.Bookmarks"
 vscode "bierner.emojisense"
