@@ -114,7 +114,6 @@ cask "todoist"
 cask "tunnelblick"
 cask "vagrant"
 cask "visual-studio-code"
-cask "vlc"
 mas "com.adriangranados.wifiexplorerlite", id: 1408727408
 mas "Day One", id: 1055511498
 mas "GarageBand", id: 682658836
