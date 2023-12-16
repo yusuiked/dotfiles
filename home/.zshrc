@@ -119,16 +119,16 @@ export SDKMAN_DIR="$HOME/.sdkman"
 #######################
 # Alias settings      #
 #######################
-# Prefer exa, If not available, use ls to set alias.
-if type exa >/dev/null 2>&1; then
-  alias ls='exa -F --color=auto --icons'
-  alias la='exa -aF --color=auto --icons'
-  alias ll='exa -hlF --git --color=auto --icons'
-  alias lla='exa -ahlF --git --color=auto --icons'
-  alias lld='exa -dhlF --color=auto --icons'
-  alias ll.='exa -dhlF --git --color=auto --icons .*'
-  alias lt='exa -FTL 2 --color=auto --icons'
-  alias llt='exa -hlFTL 2 --git --color=auto --icons'
+# Prefer eza, If not available, use ls to set alias.
+if type eza >/dev/null 2>&1; then
+  alias ls='eza -F --color=auto --icons'
+  alias la='eza -aF --color=auto --icons'
+  alias ll='eza -hlF --git --color=auto --icons'
+  alias lla='eza -ahlF --git --color=auto --icons'
+  alias lld='eza -dhlF --color=auto --icons'
+  alias ll.='eza -dhlF --git --color=auto --icons .*'
+  alias lt='eza -FTL 2 --color=auto --icons'
+  alias llt='eza -hlFTL 2 --git --color=auto --icons'
 else
   case ${OSTYPE} in
     freebsd*|darwin*)
