@@ -1,5 +1,4 @@
 tap "buo/cask-upgrade"
-tap "heroku/brew"
 tap "homebrew/bundle"
 tap "homebrew/cask-fonts"
 tap "homebrew/cask-versions"
@@ -75,7 +74,6 @@ brew "zsh-autosuggestions"
 brew "zsh-completions"
 brew "zsh-history-substring-search"
 brew "zsh-syntax-highlighting"
-brew "heroku/brew/heroku"
 brew "sanemat/font/ricty", args: ["with-powerline"]
 cask "1password"
 cask "alfred"
