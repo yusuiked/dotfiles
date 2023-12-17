@@ -162,3 +162,5 @@ unset _p
 unset _path
 
 complete -C /usr/local/bin/terraform terraform
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash

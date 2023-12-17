@@ -1,9 +1,13 @@
+# sheldon
+if type sheldon > /dev/null 2>&1; then
+  eval "$(sheldon source)"
+fi
+
 #######################
 # Completion settings #
 #######################
 # for zsh-completion
 if type brew >/dev/null 2>&1; then
-  fpath=($HOMEBREW_PREFIX/share/zsh-completions $fpath)
   fpath=($HOMEBREW_PREFIX/share/zsh/site-functions $fpath)
 fi
 
@@ -12,16 +16,6 @@ if [ -d $HOMEBREW_PREFIX/Caskroom/google-cloud-sdk/latest/google-cloud-sdk ]; th
   source "$HOMEBREW_PREFIX/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc"
   source "$HOMEBREW_PREFIX/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
 fi
-
-# Elimination of duplicate PATH
-typeset -U path fpath manpath
-
-# The following lines were added by compinstall
-zstyle :compinstall filename "$HOME/.zshrc"
-
-autoload -Uz compinit
-compinit
-# End of lines added by compinstall
 
 # Interactive refinement of completion candidates
 # https://qiita.com/ToruIwashita/items/5cfa382e9ae2bd0502be
@@ -58,6 +52,9 @@ function anything-repo() {
 zle -N anything-repo
 bindkey '^]' anything-repo
 
+bindkey -M emacs '^P' history-substring-search-up
+bindkey -M emacs '^N' history-substring-search-down
+
 #######################
 # Terminal appearance #
 #######################
@@ -66,31 +63,10 @@ export CLICOLOR=true
 export LSCOLORS=gxfxcxdxbxegedabagacad
 # Completion candidate color setting
 [ -n "${LS_COLORS}" ] && zstyle ':completion:*' list-colors "${LS_COLORS}"
-# Colorize prompt
-autoload -Uz colors
-colors
 
 # prompt customization by starship
 if type starship >/dev/null 2>&1; then
   eval "$(starship init zsh)"
-fi
-
-#######################
-# zsh plugins         #
-#######################
-# zsh-syntax-highlighting (See: https://github.com/zsh-users/zsh-syntax-highlighting)
-if [ -f $HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]; then
-  source $HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-fi
-
-# zsh-history-substring-search (See: https://github.com/zsh-users/zsh-history-substring-search)
-if [ -f $HOMEBREW_PREFIX/share/zsh-history-substring-search/zsh-history-substring-search.zsh ]; then
-  source $HOMEBREW_PREFIX/share/zsh-history-substring-search/zsh-history-substring-search.zsh
-fi
-
-# zsh-autosuggestions (See: https://github.com/zsh-users/zsh-autosuggestions)
-if [ -f $HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]; then
-  source $HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 fi
 
 #######################
