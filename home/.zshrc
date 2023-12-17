@@ -17,12 +17,6 @@ if [ -d $HOMEBREW_PREFIX/Caskroom/google-cloud-sdk/latest/google-cloud-sdk ]; th
   source "$HOMEBREW_PREFIX/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
 fi
 
-# Interactive refinement of completion candidates
-# https://qiita.com/ToruIwashita/items/5cfa382e9ae2bd0502be
-zstyle ':completion:*' menu select interactive
-zstyle ':completion:*:default' menu select=2
-setopt menu_complete
-
 #######################
 # Application setup   #
 #######################
