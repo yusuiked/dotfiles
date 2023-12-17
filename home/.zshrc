@@ -23,35 +23,6 @@ zstyle ':completion:*' menu select interactive
 zstyle ':completion:*:default' menu select=2
 setopt menu_complete
 
-# Lines configured by zsh-newuser-install
-#######################
-# Key binding         #
-#######################
-bindkey -e
-# End of lines configured by zsh-newuser-install
-bindkey \^U backward-kill-line
-# Move completion menu with Vim keybind
-# https://qiita.com/ToruIwashita/items/5cfa382e9ae2bd0502be
-zmodload zsh/complist
-bindkey -M menuselect 'h' vi-backward-char
-bindkey -M menuselect 'j' vi-down-line-or-history
-bindkey -M menuselect 'k' vi-up-line-or-history
-bindkey -M menuselect 'l' vi-forward-char
-# Keybinding to fuzzy search the github repo and change dir to it
-function anything-repo() {
-  local src=$(ghq list -p | fzf --query "$LBUFFER")
-  if [ -n "$src" ]; then
-    BUFFER="cd $src"
-    zle accept-line
-  fi
-  zle -R -c
-}
-zle -N anything-repo
-bindkey '^]' anything-repo
-
-bindkey -M emacs '^P' history-substring-search-up
-bindkey -M emacs '^N' history-substring-search-down
-
 #######################
 # Application setup   #
 #######################
