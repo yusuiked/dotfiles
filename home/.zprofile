@@ -3,23 +3,29 @@ export EDITOR="vim"
 
 # Initialize PATH
 if [ -x /usr/libexec/path_helper ]; then
-  eval `/usr/libexec/path_helper -s`
+  eval $(/usr/libexec/path_helper -s)
 fi
 
-# Switching with CPU architecture
-if [ "$(uname -m)" = "arm64" ]; then
-  eval "$(/opt/homebrew/bin/brew shellenv)"
-else
-  eval "$(/usr/local/bin/brew shellenv)"
+# Homebrew
+case $(uname -m) in
+  "x86_64" ) 
+    if [[ $OSTYPE == linux* ]]; then
+      eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+    else
+      eval "$(/usr/local/bin/brew shellenv)"
+    fi
+    ;;
+  "arm64" )
+    eval "$(/opt/homebrew/bin/brew shellenv)"
+    ;;
+esac
+fpath=($HOMEBREW_PREFIX/share/zsh/site-functions $fpath)
+manpath=($HOMEBREW_PREFIX/share/man $manpath)
 
-  # Add /usr/local/sbin to PATH.
-  if [ -d /usr/local/sbin ]; then
-    export PATH="/usr/local/sbin:$PATH"
-  fi
-  # Initialize MANPATH
-  if [ -d /usr/local/share/man ]; then
-    export MANPATH="/usr/local/share/man:$MANPATH"
-  fi
+# homeshick
+if [[ -d $HOMEBREW_PREFIX/opt/homeshick ]]; then
+  export HOMESHICK_DIR=$HOMEBREW_PREFIX/opt/homeshick
+  source $HOMESHICK_DIR/homeshick.sh
 fi
 
 # coreutils
@@ -90,23 +96,26 @@ if [ -x $HOMEBREW_PREFIX/bin/fzf ]; then
   export FZF_DEFAULT_OPTS='--height 40% --layout=reverse --border'
 fi
 
-###################################
-# Specified Environment Variables #
-###################################
+# sdkman
+export SDKMAN_DIR="$HOME/.sdkman"
 
-# Settings Java version
-if type jenv > /dev/null 2>&1; then
-  export JAVA_HOME=$(/usr/libexec/java_home -v "$(jenv global)")
+# maven
+if [[ -x $HOME/.sdkman/candidates/maven/current/bin/mvn ]]; then
+  export M2_HOME=$HOME/.sdkman/candidates/maven/current/bin/mvn
 fi
 
-# Setting the character encoding of the Java and Groovy
-# http://uehaj.hatenablog.com/entry/20090815/1250316330
-# When changing the character encoding of the entire JVM language to UTF-8.
+## Setting the character encoding of the Java and Groovy
+## http://uehaj.hatenablog.com/entry/20090815/1250316330
+## Groovy only when changing the character enconding to UTF-8.
+#export JAVA_OPTS='-Dgroovy.source.encoding=UTF-8 -Dfile.encoding=UTF-8'
+## When changing the character encoding of the entire JVM language to UTF-8.
 #export _JAVA_OPTIONS='-Dfile.encoding=UTF-8'
-# Groovy only when changing the character enconding to UTF-8.
-#export JAVA_OPTS='-Dgroovy.source.encoding=UTF-8'
 
-# for golang
+# golang
 export GOPATH=$HOME
 export PATH="$GOPATH/bin:$PATH"
 
+# gcloud
+if [[ -f $HOMEBREW_PREFIX/share/google-cloud-sdk/path.zsh.inc ]]; then
+  source $HOMEBREW_PREFIX/share/google-cloud-sdk/path.zsh.inc
+fi

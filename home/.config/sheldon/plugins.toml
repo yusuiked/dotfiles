@@ -63,3 +63,6 @@ local = "~/.zsh.d/defer"
 use = ["*.zsh"]
 apply = ["defer"]
 
+[plugins.gcloud-completions]
+inline = "[ -f $HOMEBREW_PREFIX/share/google-cloud-sdk/completion.zsh.inc ] && zsh-defer source $HOMEBREW_PREFIX/share/google-cloud-sdk/completion.zsh.inc"
+
