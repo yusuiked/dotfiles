@@ -1,15 +1,5 @@
-# The global setting of the laptop is the English locale, in order to use Japanese in the terminal
-export LANG=en_US.UTF-8
 # Initialize EDITOR
 export EDITOR="vim"
-#######################
-# History settings    #
-#######################
-export HISTFILE=${HOME}/.zsh_history
-export HISTSIZE=10000
-export SAVEHIST=100000
-setopt hist_ignore_dups
-setopt extended_history
 
 # Initialize PATH
 if [ -x /usr/libexec/path_helper ]; then
