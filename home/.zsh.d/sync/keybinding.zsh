@@ -15,15 +15,6 @@ bindkey -M menuselect 'l' vi-forward-char
 bindkey -M emacs '^P' history-substring-search-up
 bindkey -M emacs '^N' history-substring-search-down
 
-# Keybinding to fuzzy search the shell history
-function fzf-select-history {
-  BUFFER=$(history -n -r 1 | fzf --query "$LBUFFER")
-  CURSOR=$#BUFFER
-  zle reset-prompt
-}
-zle -N fzf-search-history
-bindkey '^r' fzf-select-history
-
 # Keybinding to fuzzy search the github repo and change dir to it
 function anything-repo {
   local src=$(ghq list -p | fzf --query "$LBUFFER")
