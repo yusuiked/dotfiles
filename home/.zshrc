@@ -22,9 +22,6 @@ fi
 zstyle ':completion:*' menu select interactive
 zstyle ':completion:*:default' menu select=2
 setopt menu_complete
-# Enhance completion
-setopt auto_param_slash
-setopt mark_dirs
 
 # Lines configured by zsh-newuser-install
 #######################
