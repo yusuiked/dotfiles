@@ -56,20 +56,6 @@ bindkey -M emacs '^P' history-substring-search-up
 bindkey -M emacs '^N' history-substring-search-down
 
 #######################
-# Terminal appearance #
-#######################
-export CLICOLOR=true
-# for BSD ls
-export LSCOLORS=gxfxcxdxbxegedabagacad
-# Completion candidate color setting
-[ -n "${LS_COLORS}" ] && zstyle ':completion:*' list-colors "${LS_COLORS}"
-
-# prompt customization by starship
-if type starship >/dev/null 2>&1; then
-  eval "$(starship init zsh)"
-fi
-
-#######################
 # Application setup   #
 #######################
 # homeshick
