@@ -49,7 +49,7 @@ set number
 "set list
 
 " タブ幅の設定
-set tabstop=4
+set tabstop=2
 
 " 括弧入力時に対応する括弧を強調する
 set showmatch
@@ -69,14 +69,11 @@ set wrap
 " 逆は [ set noexpandtab ]
 set expandtab
 
-" タブ文字を，画面上の見た目で何も自分に展開するか
-set tabstop=4
-
 " vimが挿入するインデントで挿入される幅を指定
-set shiftwidth=4
+set shiftwidth=2
 
 " キーボードでTabキーを押したときに挿入される空白の量
-set softtabstop=4
+set softtabstop=2
 
 " vim で backspace が効かない不具合に対処
 " http://wonderwall.hatenablog.com/entry/2016/03/23/232634
