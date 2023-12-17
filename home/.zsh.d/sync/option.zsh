@@ -21,4 +21,5 @@ setopt mark_dirs
 setopt list_types
 setopt correct
 setopt rm_star_wait
+setopt complete_aliases
 

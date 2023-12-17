@@ -58,3 +58,8 @@ local = "~/.zsh.d/sync"
 use = ["*.zsh"]
 apply = ["source"]
 
+[plugins.dotfiles-defer]
+local = "~/.zsh.d/defer"
+use = ["*.zsh"]
+apply = ["defer"]
+
