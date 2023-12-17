@@ -61,7 +61,7 @@ fi
 function jgrep() {
   if ! [[ -x $HOMEBREW_PREFIX/bin/gron ]]; then
     echo 'gron command is not installed'
-    exit 1
+    return 1
   fi
   gron | grep $* | gron -u
 }
