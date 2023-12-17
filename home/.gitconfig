@@ -19,7 +19,7 @@
 	conflictstyle = diff3
 [diff]
 	compactionHeuristic = true
-    colorMoved = default
+	colorMoved = default
 [alias]
 	ci = commit
 	co = checkout
@@ -37,9 +37,9 @@
 [delta]
 	# See: https://zenn.dev/arkbig/articles/terminal-2022_e6b10a37281b21
 	features = decorations
-    syntax-theme = OneHalfDark
-    navigate = true
-    side-by-side = true
+	syntax-theme = OneHalfDark
+	navigate = true
+	side-by-side = true
 [delta "interactive"]
 	keep-plus-minus-markers = false
 [delta "decorations"]
