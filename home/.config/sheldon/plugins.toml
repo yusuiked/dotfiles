@@ -53,3 +53,8 @@ apply = ["defer"]
 github = "zsh-users/zsh-history-substring-search"
 apply = ["defer"]
 
+[plugins.dotfiles-sync]
+local = "~/.zsh.d/sync"
+use = ["*.zsh"]
+apply = ["source"]
+
