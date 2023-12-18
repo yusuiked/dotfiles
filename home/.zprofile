@@ -10,8 +10,8 @@ fi
 case $(uname -m) in
   "x86_64" ) 
     if [[ $OSTYPE == linux* ]]; then
-      eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-    else
+  eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+  else
       eval "$(/usr/local/bin/brew shellenv)"
     fi
     ;;
@@ -94,7 +94,7 @@ fi
 # fzf default options
 if [ -x $HOMEBREW_PREFIX/bin/fzf ]; then
   export FZF_DEFAULT_OPTS='--height 40% --layout=reverse --border'
-  if [ -x $HOMEBREW_PREFIX/bin/fd ]; then
+if [ -x $HOMEBREW_PREFIX/bin/fd ]; then
     export FZF_DEFAULT_COMMAND="fd -t f -L -H -E .git --color=always"
     export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
     export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS --ansi"

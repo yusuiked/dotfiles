@@ -10,8 +10,6 @@
 	pager = delta
 [init]
 	defaultBranch = main
-[includeIf "gitdir:~/src/github.com/heyinc/"]
-	path = ~/.gitconfig_office
 [pull]
 	ff = only
 	rebase = false
