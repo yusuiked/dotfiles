@@ -8,6 +8,7 @@
 	excludesfile = ~/.gitignore_global
 	attributesfile = ~/.gitattributes_global
 	pager = delta
+	eol = lf
 [init]
 	defaultBranch = main
 [pull]
