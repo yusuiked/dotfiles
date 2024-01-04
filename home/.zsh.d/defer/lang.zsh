@@ -7,7 +7,7 @@ fi
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
 # rtx
-if type rtx > /dev/null 2>&1; then
-  eval "$(rtx activate zsh)"
+if type mise > /dev/null 2>&1; then
+  eval "$(mise activate zsh)"
 fi
 
