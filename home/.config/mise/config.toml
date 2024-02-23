@@ -1,3 +1,6 @@
 [tools]
 node = "20"
+terraform = "latest"
+terraform-docs = "latest"
+tflint = "latest"
 
