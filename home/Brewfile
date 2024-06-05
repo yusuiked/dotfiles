@@ -15,7 +15,7 @@ brew "icu4c"
 brew "boost"
 brew "mpfr"
 brew "btop"
-brew "glib", link: false
+brew "glib"
 brew "cloc"
 brew "coreutils"
 brew "ctop"
