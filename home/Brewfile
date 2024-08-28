@@ -108,6 +108,7 @@ cask "raycast"
 cask "rectangle"
 cask "tunnelblick"
 cask "visual-studio-code"
+cask "zoom"
 mas "com.adriangranados.wifiexplorerlite", id: 1408727408
 mas "Day One", id: 1055511498
 mas "GarageBand", id: 682658836
