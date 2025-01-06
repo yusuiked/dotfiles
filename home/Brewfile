@@ -27,6 +27,8 @@ brew "sheldon"
 brew "starship"
 brew "tig"
 brew "tmux"
+brew "trash", link: true
+brew "tree"
 brew "vim"
 brew "xsv"
 brew "yq"
