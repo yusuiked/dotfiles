@@ -107,9 +107,9 @@ cask "rectangle"
 cask "tunnelblick"
 cask "visual-studio-code"
 cask "zoom"
-mas "com.adriangranados.wifiexplorerlite", id: 1408727408
 mas "Day One", id: 1055511498
 mas "Todoist", id: 585829637
+mas "WiFi Explorer Lite", id: 1408727408
 mas "Xcode", id: 497799835
 mas "紀伊國屋書店Kinoppy", id: 572547904
 vscode "alefragnani.bookmarks"
