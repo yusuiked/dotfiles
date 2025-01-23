@@ -6,8 +6,8 @@ if type eza > /dev/null 2>&1; then
   alias lla='eza -ahlF --git --color=auto --icons'
   alias lld='eza -dhlF --color=auto --icons'
   alias ll.='eza -dhlF --git --color=auto --icons .*'
-  alias lt='eza -FTL 2 --color=auto --icons'
-  alias llt='eza -hlFTL 2 --git --color=auto --icons'
+  alias lt='eza -F -TL 2 --color=auto --icons'
+  alias llt='eza -F -hlTL 2 --git --color=auto --icons'
 else
   case ${OSTYPE} in
     freebsd*|darwin*)
