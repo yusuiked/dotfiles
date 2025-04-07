@@ -51,6 +51,12 @@ alias vi='vim'
 # tmux
 alias tm='tmux'
 
+# clipboard utility for WSL2
+if [[ "$(uname -r)" == *microsoft* ]]; then
+  alias pbcopy='clip.exe'
+  alias pbpaste='powershell.exe -Command Get-Clipboard'
+fi
+
 # for github navigation
 if [[ -x $HOMEBREW_PREFIX/bin/fzf && -x $HOMEBREW_PREFIX/bin/ghq && -x $HOMEBREW_PREFIX/bin/gh ]]; then
   alias repo='cd $(ghq list -p | fzf)'
