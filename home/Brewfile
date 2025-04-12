@@ -1,7 +1,4 @@
 tap "buo/cask-upgrade"
-tap "homebrew/bundle"
-tap "homebrew/cask-fonts"
-tap "homebrew/cask-versions"
 tap "nodenv/nodenv"
 tap "sanemat/font"
 tap "vitorgalvao/tiny-scripts"
