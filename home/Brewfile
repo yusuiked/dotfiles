@@ -107,9 +107,12 @@ cask "rectangle"
 cask "tunnelblick"
 cask "visual-studio-code"
 cask "zoom"
-cask "windows-app"
 mas "Day One", id: 1055511498
-mas "Todoist", id: 585829637
+mas "GarageBand", id: 682658836
+mas "iMovie", id: 408981434
+mas "Keynote", id: 409183694
+mas "Numbers", id: 409203825
+mas "Pages", id: 409201541
 mas "WiFi Explorer Lite", id: 1408727408
 mas "Xcode", id: 497799835
 mas "紀伊國屋書店Kinoppy", id: 572547904
@@ -121,6 +124,7 @@ vscode "csholmq.excel-to-markdown-table"
 vscode "davidanson.vscode-markdownlint"
 vscode "dbaeumer.vscode-eslint"
 vscode "deerawan.vscode-dash"
+vscode "docker.docker"
 vscode "donjayamanne.githistory"
 vscode "editorconfig.editorconfig"
 vscode "emilast.logfilehighlighter"
