@@ -7,9 +7,9 @@ if [ -x /usr/libexec/path_helper ]; then
 fi
 
 # Homebrew
-case $(uname -m) in
+case $(/usr/bin/uname -m) in
   "x86_64" ) 
-    if [[ $OSTYPE == linux* ]]; then
+    if [[ "$OSTYPE" == *"linux"* ]]; then
       eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
     else
       eval "$(/usr/local/bin/brew shellenv)"
@@ -124,3 +124,4 @@ export PATH="$GOPATH/bin:$PATH"
 if [[ -f $HOMEBREW_PREFIX/share/google-cloud-sdk/path.zsh.inc ]]; then
   source $HOMEBREW_PREFIX/share/google-cloud-sdk/path.zsh.inc
 fi
+
