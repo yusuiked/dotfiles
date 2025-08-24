@@ -1,5 +1,4 @@
 tap "buo/cask-upgrade"
-tap "nodenv/nodenv"
 tap "sanemat/font"
 tap "vitorgalvao/tiny-scripts"
 brew "ansible"
