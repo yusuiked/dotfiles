@@ -1,9 +1,14 @@
 # Initialize EDITOR
 export EDITOR="vim"
 
-# Initialize PATH
-if [ -x /usr/libexec/path_helper ]; then
-  eval $(/usr/libexec/path_helper -s)
+if [[ "$OSTYPE" == "darwin*" ]]; then
+  # Initialize PATH
+  if [ -x /usr/libexec/path_helper ]; then
+    eval "$(/usr/libexec/path_helper -s)"
+  fi
+else
+  # for Ubuntu/WSL (zsh via homebrew, missing /etc/zprofile)
+  export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
 fi
 
 # Homebrew
