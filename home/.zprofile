@@ -8,7 +8,7 @@ if [[ "$OSTYPE" == "darwin*" ]]; then
   fi
 else
   # for Ubuntu/WSL (zsh via homebrew, missing /etc/zprofile)
-  export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+  export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH"
 fi
 
 # Homebrew
