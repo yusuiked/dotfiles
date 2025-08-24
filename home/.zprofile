@@ -1,7 +1,7 @@
 # Initialize EDITOR
 export EDITOR="vim"
 
-if [[ "$OSTYPE" == "darwin*" ]]; then
+if [[ "$OSTYPE" == "darwin"* ]]; then
   # Initialize PATH
   if [ -x /usr/libexec/path_helper ]; then
     eval "$(/usr/libexec/path_helper -s)"
