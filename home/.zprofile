@@ -1,7 +1,7 @@
 # Initialize EDITOR
 export EDITOR="vim"
 
-if [[ "$OSTYPE" == "darwin*" ]]; then
+if [[ "$OSTYPE" == "darwin"* ]]; then
   # Initialize PATH
   if [ -x /usr/libexec/path_helper ]; then
     eval "$(/usr/libexec/path_helper -s)"
@@ -13,7 +13,7 @@ fi
 
 # Homebrew
 case $(/usr/bin/uname -m) in
-  "x86_64" ) 
+  "x86_64" )
     if [[ "$OSTYPE" == *"linux"* ]]; then
       eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
     else
