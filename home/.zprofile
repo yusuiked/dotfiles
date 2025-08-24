@@ -13,7 +13,7 @@ fi
 
 # Homebrew
 case $(/usr/bin/uname -m) in
-  "x86_64" ) 
+  "x86_64" )
     if [[ "$OSTYPE" == *"linux"* ]]; then
       eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
     else
