@@ -7,7 +7,7 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
     eval "$(/usr/libexec/path_helper -s)"
   fi
 else
-  # for Ubuntu/WSL (zsh via homebrew, missing /etc/zprofile)
+  # for Ubuntu/WSL
   export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH"
 fi
 
