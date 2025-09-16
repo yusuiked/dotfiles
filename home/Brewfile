@@ -72,6 +72,7 @@ brew "zsh"
 brew "sanemat/font/ricty", args: ["with-powerline"]
 cask "1password"
 cask "appcleaner"
+cask "brave-browser"
 cask "chromedriver"
 cask "dash"
 cask "devtoys"
