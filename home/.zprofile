@@ -1,15 +1,20 @@
 # Initialize EDITOR
 export EDITOR="vim"
 
-# Initialize PATH
-if [ -x /usr/libexec/path_helper ]; then
-  eval $(/usr/libexec/path_helper -s)
+if [[ "$OSTYPE" == "darwin"* ]]; then
+  # Initialize PATH
+  if [ -x /usr/libexec/path_helper ]; then
+    eval "$(/usr/libexec/path_helper -s)"
+  fi
+else
+  # for Ubuntu/WSL (zsh via homebrew, missing /etc/zprofile)
+  export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH"
 fi
 
 # Homebrew
-case $(uname -m) in
-  "x86_64" ) 
-    if [[ $OSTYPE == linux* ]]; then
+case $(/usr/bin/uname -m) in
+  "x86_64" )
+    if [[ "$OSTYPE" == *"linux"* ]]; then
       eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
     else
       eval "$(/usr/local/bin/brew shellenv)"
@@ -128,3 +133,4 @@ export PERL5LIB=$HOME/local/lib/perl5/lib/perl5:$PERL5LIB;
 if [[ -f $HOMEBREW_PREFIX/share/google-cloud-sdk/path.zsh.inc ]]; then
   source $HOMEBREW_PREFIX/share/google-cloud-sdk/path.zsh.inc
 fi
+

@@ -3,7 +3,7 @@ terraform = "latest"
 terraform-docs = "latest"
 tflint = "latest"
 usage = "latest"
-golangci-lint = "1.64.8"
+golangci-lint = "2.4.0"
 node = "22"
 ruby = "3.4.2"
 
