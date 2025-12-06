@@ -71,6 +71,7 @@ brew "yq"
 brew "zsh"
 brew "sanemat/font/ricty", args: ["with-powerline"]
 cask "1password"
+cask "1password-cli"
 cask "appcleaner"
 cask "brave-browser"
 cask "chromedriver"
