@@ -84,6 +84,7 @@ brew "trash", link: true
 brew "vim"
 brew "wget"
 brew "xsv"
+brew "xvid"
 brew "yq"
 brew "zsh"
 brew "heyinc/tap/stpkg"
