@@ -134,3 +134,7 @@ if [[ -f $HOMEBREW_PREFIX/share/google-cloud-sdk/path.zsh.inc ]]; then
   source $HOMEBREW_PREFIX/share/google-cloud-sdk/path.zsh.inc
 fi
 
+
+# Added by OrbStack: command-line tools and integration
+# This won't be added again if you remove it.
+source ~/.orbstack/shell/init.zsh 2>/dev/null || :
