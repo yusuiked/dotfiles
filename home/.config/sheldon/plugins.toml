@@ -63,3 +63,6 @@ local = "~/.zsh.d/defer"
 use = ["*.zsh"]
 apply = ["defer"]
 
+[plugins.gcloud-completions]
+inline = "[ -f $(mise where gcloud)/completion.zsh.inc ] && zsh-defer source $(mise where gcloud)/completion.zsh.inc"
+
