@@ -1,3 +1,11 @@
+[env]
+mise.file = ".env"
+
+[settings]
+trusted_config_paths = [
+  '~/src/github.com/heyinc',
+]
+
 [tools]
 terraform = "latest"
 terraform-docs = "latest"
