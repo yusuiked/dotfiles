@@ -66,6 +66,7 @@ ssh_only = false
 
 [java]
 symbol = " "
+style = "red bold"
 
 [julia]
 symbol = " "
@@ -127,7 +128,7 @@ Unknown = " "
 Windows = " "
 
 [package]
-symbol = " "
+symbol = "📦 "
 
 [python]
 symbol = " "
