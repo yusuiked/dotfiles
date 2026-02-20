@@ -52,6 +52,9 @@ symbol = " "
 [guix_shell]
 symbol = " "
 
+[gradle]
+symbol = "🐘 "
+
 [haskell]
 symbol = " "
 
