@@ -1,6 +1,7 @@
 tap "buo/cask-upgrade"
 tap "sanemat/font"
 tap "vitorgalvao/tiny-scripts"
+brew "act"
 brew "tree"
 brew "ansible"
 brew "asciinema"
