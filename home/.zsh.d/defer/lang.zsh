@@ -6,7 +6,7 @@ fi
 # sdkman
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
-# rtx
+# mise
 if type mise > /dev/null 2>&1; then
   eval "$(mise activate zsh)"
 fi
