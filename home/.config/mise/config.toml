@@ -7,6 +7,7 @@ trusted_config_paths = [
 ]
 
 [tools]
+go = "1.26.1"
 terraform = "latest"
 terraform-docs = "latest"
 tflint = "latest"
