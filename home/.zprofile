@@ -126,7 +126,7 @@ export GOPATH=$HOME
 export PATH="$GOPATH/bin:$PATH"
 
 # gcloud
-if [[ -f $HOMEBREW_PREFIX/share/google-cloud-sdk/path.zsh.inc ]]; then
-  source $HOMEBREW_PREFIX/share/google-cloud-sdk/path.zsh.inc
+if [[ -f $(mise where gcloud)/path.zsh.inc ]]; then
+  source $(mise where gcloud)/path.zsh.inc
 fi
 
