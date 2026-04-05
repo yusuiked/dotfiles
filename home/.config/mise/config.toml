@@ -1,3 +1,4 @@
 [tools]
+gcloud = "latest"
 go = "1.26.1"
 node = "22"
