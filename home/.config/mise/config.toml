@@ -16,4 +16,5 @@ golangci-lint = "2.10.1"
 node = "22"
 ruby = "3.4.2"
 gcloud = "latest"
+claude = "latest"
 
