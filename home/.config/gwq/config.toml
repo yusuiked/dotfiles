@@ -1,0 +1,20 @@
+[cd]
+launch_shell = true
+
+[finder]
+preview = true
+
+[naming]
+template = '{{.Host}}/{{.Owner}}/{{.Repository}}={{.Branch}}'
+
+[naming.sanitize_chars]
+'/' = '-'
+':' = '-'
+
+[ui]
+icons = true
+tilde_home = true
+
+[worktree]
+auto_mkdir = true
+basedir = '/Users/yusuiked/src'
