@@ -38,7 +38,7 @@ symbol = " "
 symbol = ' '
 
 [gcloud]
-symbol = " "
+symbol = "󱇶 "
 
 [git_branch]
 symbol = " "
