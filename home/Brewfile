@@ -68,6 +68,7 @@ brew "tmux"
 brew "trash", link: true
 brew "vim"
 brew "wakeonlan"
+brew "webp"
 brew "wget"
 brew "xvid"
 brew "yq"
