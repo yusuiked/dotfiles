@@ -1,87 +1,165 @@
-tap "buo/cask-upgrade"
-tap "d-kuro/tap"
-tap "sanemat/font"
+tap "buo/cask-upgrade", trusted: true
+tap "d-kuro/tap", trusted: true
 tap "vitorgalvao/tiny-scripts"
+# Run your GitHub Actions locally
 brew "act"
+# Display directories as trees (with optional color/HTML output)
 brew "tree"
+# Automate deployment, configuration, and upgrading
 brew "ansible"
+# Record and share terminal sessions
 brew "asciinema"
+# Official Amazon AWS command-line interface
 brew "awscli"
+# C string library for manipulating Unicode strings
 brew "libunistring"
+# Programmable completion for Bash 3.2
 brew "bash-completion"
+# Regular expressions library
 brew "oniguruma"
+# Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
+# Collection of portable C++ source libraries
 brew "boost"
+# Resource monitor. C++ version and continuation of bashtop and bpytop
 brew "btop"
+# Core application library for C
 brew "glib"
+# Statistics utility to count lines of code
 brew "cloc"
+# GNU File, Shell, and Text utilities
 brew "coreutils"
+# Top-like interface for container metrics
 brew "ctop"
+# File comparison utilities
 brew "diffutils"
+# Load/unload environment variables based on $PWD
 brew "direnv"
+# Disk Usage/Free Utility - a better 'df' alternative
 brew "duf"
+# More intuitive version of du in rust
 brew "dust"
+# Modern, maintained replacement for ls
 brew "eza"
+# Simple, fast and user-friendly alternative to find
 brew "fd"
+# Identify or delete duplicate files
 brew "fdupes"
+# Play, record, convert, and stream select audio and video codecs
 brew "ffmpeg"
+# Collection of GNU find, xargs, and locate
 brew "findutils"
+# Command-line fuzzy finder written in Go
 brew "fzf"
+# C library for multiple-precision floating-point computations
 brew "mpfr"
+# GNU awk utility
 brew "gawk"
+# GitHub command-line tool
 brew "gh"
+# Remote repository management made easy
 brew "ghq"
+# Distributed revision control system
 brew "git"
+# Syntax-highlighting pager for git and diff output
 brew "git-delta"
+# Prevents you from committing sensitive information to a git repo
 brew "git-secrets"
+# Render markdown on the CLI
 brew "glow"
+# GNU implementation of the famous stream editor
 brew "gnu-sed"
+# GNU version of the tar archiving utility
 brew "gnu-tar"
+# GNU implementation of time utility
 brew "gnu-time"
+# GNU grep, egrep and fgrep
 brew "grep"
+# Make JSON greppable
 brew "gron"
+# Popular GNU data compression program
 brew "gzip"
+# OpenType text shaping engine
 brew "harfbuzz"
+# Git dotfiles synchronizer written in bash
 brew "homeshick"
+# User-friendly cURL replacement (command-line HTTP client)
 brew "httpie"
+# Configurable static site generator
 brew "hugo"
+# Interactive JSON filter using jq
 brew "jnv"
+# Lightweight and flexible command-line JSON processor
 brew "jq"
+# Fast and powerful Git hooks manager for any type of projects
 brew "lefthook"
+# Keep your Mac's application settings in sync
 brew "mackup"
+# Mac App Store command-line interface
 brew "mas"
+# Polyglot runtime manager (asdf rust clone)
 brew "mise"
+# Utility for managing network connections
 brew "netcat"
+# Network Kanji code conversion Filter (NKF)
 brew "nkf"
+# Perl compatible regular expressions library
 brew "pcre"
+# CLI for Postgres with auto-completion and syntax highlighting
 brew "pgcli"
+# Modern replacement for ps written in Rust
 brew "procs"
+# Show ps output as a tree
 brew "pstree"
+# Rsync for cloud storage
 brew "rclone"
+# Reattach process (e.g., tmux) to background
 brew "reattach-to-user-namespace"
+# Perl-powered file rename script with many helpful built-ins
 brew "rename"
+# Search tool like grep and The Silver Searcher
 brew "ripgrep"
+# Fast, configurable, shell plugin manager
 brew "sheldon"
+# Cross-shell prompt for astronauts
 brew "starship"
+# Text interface for Git repositories
 brew "tig"
+# Terminal multiplexer
 brew "tmux"
+# CLI tool that moves files or folder to the trash
 brew "trash", link: true
+# Vi 'workalike' with many additional features
 brew "vim"
+# Sends magic packets to wake up network-devices
 brew "wakeonlan"
+# Image format providing lossless and lossy compression for web images
 brew "webp"
+# Internet file retriever
 brew "wget"
+# High-performance, high-quality MPEG-4 video library
 brew "xvid"
+# Process YAML, JSON, XML, CSV and properties documents from the CLI
 brew "yq"
+# UNIX shell (command interpreter)
 brew "zsh"
+# Git Worktree Manager for efficient worktree operations
 brew "d-kuro/tap/gwq"
-brew "sanemat/font/ricty", args: ["with-powerline"]
+# Password manager that keeps all passwords secure behind one password
 cask "1password"
+# Command-line interface for 1Password
 cask "1password-cli"
+# Application uninstaller
 cask "appcleaner"
+# Web browser focusing on privacy
 cask "brave-browser"
+# Utilities designed to make common development tasks easier
 cask "devtoys"
+# Voice and text chat software
 cask "discord"
+# App to build and share containerised applications and microservices
 cask "docker-desktop"
+# Client for the Dropbox cloud storage service
 cask "dropbox"
 cask "font-cica"
 cask "font-hackgen"
@@ -96,25 +174,45 @@ cask "font-plemol-jp"
 cask "font-plemol-jp-nf"
 cask "font-udev-gothic"
 cask "font-udev-gothic-nf"
+# Desktop client for GitHub repositories
 cask "github"
+# Web browser
 cask "google-chrome"
+# Japanese input software
 cask "google-japanese-ime"
+# Screenshot and screen recording tool
 cask "gyazo"
+# Markdown editor
 cask "inkdrop"
+# System monitoring app
 cask "istat-menus"
+# Terminal emulator as alternative to Apple's Terminal app
 cask "iterm2"
+# Enables an integrated web browser in iTerm2
 cask "itermbrowserplugin"
+# JetBrains tools manager
 cask "jetbrains-toolbox"
+# Menu bar manager
 cask "jordanbaird-ice"
+# Keyboard customiser
 cask "karabiner-elements"
+# Tool to control external monitor brightness & volume
 cask "monitorcontrol"
+# Knowledge base that works on top of a local folder of plain text Markdown files
 cask "obsidian"
+# NAS management application
 cask "qfinder-pro"
+# Control your tools with a few keystrokes
 cask "raycast"
+# Move and resize windows using keyboard shortcuts or snap areas
 cask "rectangle"
+# Free and open-source OpenVPN client
 cask "tunnelblick"
+# Development environment
 cask "vagrant"
+# Open-source code editor
 cask "visual-studio-code"
+# Connect to Windows
 cask "windows-app"
 mas "1Password for Safari", id: 1569813296
 mas "Day One", id: 1055511498
