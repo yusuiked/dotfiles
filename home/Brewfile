@@ -1,10 +1,15 @@
 tap "d-kuro/tap", trusted: true
 # Run your GitHub Actions locally
 brew "act"
+# Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
+# GNU compiler collection
 brew "gcc"
+# Resource monitor. C++ version and continuation of bashtop and bpytop
 brew "btop"
+# Top-like interface for container metrics
 brew "ctop"
+# Load/unload environment variables based on $PWD
 brew "direnv"
 # Disk Usage/Free Utility - a better 'df' alternative
 brew "duf"
@@ -14,16 +19,21 @@ brew "dust"
 brew "eza"
 # Simple, fast and user-friendly alternative to find
 brew "fd"
+# Command-line fuzzy finder written in Go
 brew "fzf"
+# GitHub command-line tool
 brew "gh"
 # Remote repository management made easy
 brew "ghq"
+# Syntax-highlighting pager for git and diff output
 brew "git-delta"
 # Prevents you from committing sensitive information to a git repo
 brew "git-secrets"
 # Render markdown on the CLI
 brew "glow"
+# Make JSON greppable
 brew "gron"
+# Git dotfiles synchronizer written in bash
 brew "homeshick"
 # User-friendly cURL replacement (command-line HTTP client)
 brew "httpie"
@@ -35,15 +45,19 @@ brew "jnv"
 brew "jq"
 # Fast and powerful Git hooks manager for any type of projects
 brew "lefthook"
+# Polyglot runtime manager (asdf rust clone)
 brew "mise"
 # Utility for managing network connections
 brew "netcat"
 # Network Kanji code conversion Filter (NKF)
 brew "nkf"
+# CLI for Postgres with auto-completion and syntax highlighting
 brew "pgcli"
 # Modern replacement for ps written in Rust
 brew "procs"
+# Rsync for cloud storage
 brew "rclone"
+# Search tool like grep and The Silver Searcher
 brew "ripgrep"
 # Fast, configurable, shell plugin manager
 brew "sheldon"
@@ -53,10 +67,15 @@ brew "starship"
 brew "tig"
 # Terminal multiplexer
 brew "tmux"
+# Vi 'workalike' with many additional features
 brew "vim"
+# Image format providing lossless and lossy compression for web images
 brew "webp"
+# Process YAML, JSON, XML, CSV and properties documents from the CLI
 brew "yq"
+# Compression and file packaging/archive utility
 brew "zip"
+# Git Worktree Manager for efficient worktree operations
 brew "d-kuro/tap/gwq"
 go "cmd/go"
 go "cmd/gofmt"
