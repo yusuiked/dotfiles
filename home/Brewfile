@@ -1,37 +1,57 @@
-tap "d-kuro/tap"
+tap "d-kuro/tap", trusted: true
+# Run your GitHub Actions locally
 brew "act"
 brew "bat"
 brew "gcc"
 brew "btop"
 brew "ctop"
 brew "direnv"
+# Disk Usage/Free Utility - a better 'df' alternative
 brew "duf"
+# More intuitive version of du in rust
 brew "dust"
+# Modern, maintained replacement for ls
 brew "eza"
+# Simple, fast and user-friendly alternative to find
 brew "fd"
 brew "fzf"
 brew "gh"
+# Remote repository management made easy
 brew "ghq"
 brew "git-delta"
+# Prevents you from committing sensitive information to a git repo
 brew "git-secrets"
+# Render markdown on the CLI
 brew "glow"
 brew "gron"
 brew "homeshick"
+# User-friendly cURL replacement (command-line HTTP client)
 brew "httpie"
+# Configurable static site generator
 brew "hugo"
+# Interactive JSON filter using jq
 brew "jnv"
+# Lightweight and flexible command-line JSON processor
 brew "jq"
+# Fast and powerful Git hooks manager for any type of projects
 brew "lefthook"
 brew "mise"
+# Utility for managing network connections
 brew "netcat"
+# Network Kanji code conversion Filter (NKF)
 brew "nkf"
 brew "pgcli"
+# Modern replacement for ps written in Rust
 brew "procs"
 brew "rclone"
 brew "ripgrep"
+# Fast, configurable, shell plugin manager
 brew "sheldon"
+# Cross-shell prompt for astronauts
 brew "starship"
+# Text interface for Git repositories
 brew "tig"
+# Terminal multiplexer
 brew "tmux"
 brew "vim"
 brew "webp"
