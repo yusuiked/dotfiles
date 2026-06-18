@@ -1,14 +1,9 @@
 tap "buo/cask-upgrade", trusted: true
 tap "d-kuro/tap", trusted: true
-tap "vitorgalvao/tiny-scripts"
 # Run your GitHub Actions locally
 brew "act"
 # Display directories as trees (with optional color/HTML output)
 brew "tree"
-# Automate deployment, configuration, and upgrading
-brew "ansible"
-# Record and share terminal sessions
-brew "asciinema"
 # Official Amazon AWS command-line interface
 brew "awscli"
 # C string library for manipulating Unicode strings
@@ -85,8 +80,6 @@ brew "harfbuzz"
 brew "homeshick"
 # User-friendly cURL replacement (command-line HTTP client)
 brew "httpie"
-# Configurable static site generator
-brew "hugo"
 # Interactive JSON filter using jq
 brew "jnv"
 # Lightweight and flexible command-line JSON processor
@@ -105,14 +98,10 @@ brew "netcat"
 brew "nkf"
 # Perl compatible regular expressions library
 brew "pcre"
-# CLI for Postgres with auto-completion and syntax highlighting
-brew "pgcli"
 # Modern replacement for ps written in Rust
 brew "procs"
 # Show ps output as a tree
 brew "pstree"
-# Rsync for cloud storage
-brew "rclone"
 # Reattach process (e.g., tmux) to background
 brew "reattach-to-user-namespace"
 # Perl-powered file rename script with many helpful built-ins
@@ -131,36 +120,18 @@ brew "tmux"
 brew "trash", link: true
 # Vi 'workalike' with many additional features
 brew "vim"
-# Sends magic packets to wake up network-devices
-brew "wakeonlan"
-# Image format providing lossless and lossy compression for web images
-brew "webp"
 # Internet file retriever
 brew "wget"
-# High-performance, high-quality MPEG-4 video library
-brew "xvid"
 # Process YAML, JSON, XML, CSV and properties documents from the CLI
 brew "yq"
 # UNIX shell (command interpreter)
 brew "zsh"
 # Git Worktree Manager for efficient worktree operations
 brew "d-kuro/tap/gwq"
-# Password manager that keeps all passwords secure behind one password
-cask "1password"
-# Command-line interface for 1Password
-cask "1password-cli"
 # Application uninstaller
 cask "appcleaner"
-# Web browser focusing on privacy
-cask "brave-browser"
 # Utilities designed to make common development tasks easier
 cask "devtoys"
-# Voice and text chat software
-cask "discord"
-# App to build and share containerised applications and microservices
-cask "docker-desktop"
-# Client for the Dropbox cloud storage service
-cask "dropbox"
 cask "font-cica"
 cask "font-hackgen"
 cask "font-hackgen-nerd"
@@ -176,14 +147,8 @@ cask "font-udev-gothic"
 cask "font-udev-gothic-nf"
 # Desktop client for GitHub repositories
 cask "github"
-# Web browser
-cask "google-chrome"
 # Japanese input software
 cask "google-japanese-ime"
-# Screenshot and screen recording tool
-cask "gyazo"
-# Markdown editor
-cask "inkdrop"
 # System monitoring app
 cask "istat-menus"
 # Terminal emulator as alternative to Apple's Terminal app
@@ -200,35 +165,12 @@ cask "karabiner-elements"
 cask "monitorcontrol"
 # Knowledge base that works on top of a local folder of plain text Markdown files
 cask "obsidian"
-# NAS management application
-cask "qfinder-pro"
 # Control your tools with a few keystrokes
 cask "raycast"
 # Move and resize windows using keyboard shortcuts or snap areas
 cask "rectangle"
-# Free and open-source OpenVPN client
-cask "tunnelblick"
-# Development environment
-cask "vagrant"
 # Open-source code editor
 cask "visual-studio-code"
-# Connect to Windows
-cask "windows-app"
-mas "1Password for Safari", id: 1569813296
-mas "Day One", id: 1055511498
-mas "GarageBand", id: 682658836
-mas "iMovie", id: 408981434
-mas "Keynote", id: 409183694
-mas "LINE", id: 539883307
-mas "Numbers", id: 409203825
-mas "Pages", id: 409201541
-mas "Slack", id: 803453959
-mas "Spark", id: 1176895641
-mas "Steam Link", id: 1246969117
-mas "Virus Scanner Plus", id: 595374522
-mas "WiFi Explorer Lite", id: 1408727408
-mas "WireGuard", id: 1451685025
-mas "紀伊國屋書店Kinoppy", id: 572547904
 vscode "alefragnani.bookmarks"
 vscode "bierner.emojisense"
 vscode "bierner.markdown-mermaid"
