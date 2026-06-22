@@ -66,6 +66,8 @@ brew "gnu-sed"
 brew "gnu-tar"
 # GNU implementation of time utility
 brew "gnu-time"
+# GNU Privacy Guard (OpenPGP)
+brew "gnupg"
 # GNU grep, egrep and fgrep
 brew "grep"
 # Make JSON greppable
