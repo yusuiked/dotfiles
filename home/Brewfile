@@ -153,6 +153,8 @@ cask "1password-cli"
 cask "appcleaner"
 # Web browser focusing on privacy
 cask "brave-browser"
+# Terminal-based AI coding assistant
+cask "claude-code"
 # Utilities designed to make common development tasks easier
 cask "devtoys"
 # Voice and text chat software
