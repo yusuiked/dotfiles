@@ -12,6 +12,8 @@
 	defaultBranch = main
 [includeIf "gitdir:~/src/github.com/kouzoh/"]
 	path = ~/.gitconfig_office
+[includeIf "gitdir:~/src/github.com/kouzoh-mercoin/"]
+	path = ~/.gitconfig_office
 [pull]
 	ff = only
 	rebase = false

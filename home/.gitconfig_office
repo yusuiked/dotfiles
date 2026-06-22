@@ -1,2 +1,7 @@
 [user]
-    email = yusuiked@mercari.com
+	email = yusuiked@mercari.com
+	signingkey = FA9D66F09D50DA68
+[commit]
+	gpgsign = true
+[gpg]
+	program = /opt/homebrew/bin/gpg
