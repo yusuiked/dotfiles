@@ -132,6 +132,8 @@ brew "d-kuro/tap/gwq", trusted: true
 cask "1password-cli"
 # Application uninstaller
 cask "appcleaner"
+# Terminal-based AI coding assistant
+cask "claude-code"
 # Utilities designed to make common development tasks easier
 cask "devtoys"
 cask "font-cica"
