@@ -127,7 +127,7 @@ brew "yq"
 # UNIX shell (command interpreter)
 brew "zsh"
 # Git Worktree Manager for efficient worktree operations
-brew "d-kuro/tap/gwq", trusted: true
+brew "d-kuro/tap/gwq"
 # Command-line interface for 1Password
 cask "1password-cli"
 # Application uninstaller
