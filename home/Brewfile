@@ -2,8 +2,6 @@ tap "buo/cask-upgrade", trusted: true
 tap "d-kuro/tap", trusted: true
 # Run your GitHub Actions locally
 brew "act"
-# Display directories as trees (with optional color/HTML output)
-brew "tree"
 # Official Amazon AWS command-line interface
 brew "awscli"
 # C string library for manipulating Unicode strings
@@ -118,6 +116,8 @@ brew "tig"
 brew "tmux"
 # CLI tool that moves files or folder to the trash
 brew "trash", link: true
+# Display directories as trees (with optional color/HTML output)
+brew "tree"
 # Vi 'workalike' with many additional features
 brew "vim"
 # Internet file retriever
@@ -127,7 +127,9 @@ brew "yq"
 # UNIX shell (command interpreter)
 brew "zsh"
 # Git Worktree Manager for efficient worktree operations
-brew "d-kuro/tap/gwq"
+brew "d-kuro/tap/gwq", trusted: true
+# Command-line interface for 1Password
+cask "1password-cli"
 # Application uninstaller
 cask "appcleaner"
 # Utilities designed to make common development tasks easier
@@ -158,7 +160,7 @@ cask "itermbrowserplugin"
 # JetBrains tools manager
 cask "jetbrains-toolbox"
 # Menu bar manager
-cask "jordanbaird-ice"
+cask "jordanbaird-ice@beta"
 # Keyboard customiser
 cask "karabiner-elements"
 # Tool to control external monitor brightness & volume
@@ -171,6 +173,11 @@ cask "raycast"
 cask "rectangle"
 # Open-source code editor
 cask "visual-studio-code"
+mas "GarageBand", id: 682658836
+mas "iMovie", id: 408981434
+mas "Keynote", id: 361285480
+mas "Numbers", id: 361304891
+mas "Pages", id: 361309726
 vscode "alefragnani.bookmarks"
 vscode "bierner.emojisense"
 vscode "bierner.markdown-mermaid"
