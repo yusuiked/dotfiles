@@ -169,8 +169,6 @@ cask "jordanbaird-ice@beta"
 cask "karabiner-elements"
 # Tool to control external monitor brightness & volume
 cask "monitorcontrol"
-# Knowledge base that works on top of a local folder of plain text Markdown files
-cask "obsidian"
 # Control your tools with a few keystrokes
 cask "raycast"
 # Move and resize windows using keyboard shortcuts or snap areas
