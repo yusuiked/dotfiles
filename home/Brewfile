@@ -167,6 +167,8 @@ cask "jetbrains-toolbox"
 cask "jordanbaird-ice@beta"
 # Keyboard customiser
 cask "karabiner-elements"
+# Shows the next meeting in the menu bar
+cask "meetingbar"
 # Tool to control external monitor brightness & volume
 cask "monitorcontrol"
 # Control your tools with a few keystrokes
