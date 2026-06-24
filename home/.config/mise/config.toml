@@ -1,4 +1,4 @@
 [tools]
 gcloud = "latest"
-go = "1.26.3"
-node = "22"
+go = "1.26"
+node = "24"
