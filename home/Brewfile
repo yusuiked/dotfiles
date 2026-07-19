@@ -1,10 +1,10 @@
 tap "d-kuro/tap", trusted: true
 # Run your GitHub Actions locally
 brew "act"
-# Clone of cat(1) with syntax highlighting and Git integration
-brew "bat"
 # GNU compiler collection
 brew "gcc"
+# Clone of cat(1) with syntax highlighting and Git integration
+brew "bat"
 # Resource monitor. C++ version and continuation of bashtop and bpytop
 brew "btop"
 # Top-like interface for container metrics
