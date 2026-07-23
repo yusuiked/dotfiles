@@ -1,13 +1,13 @@
 # ls
 if type eza > /dev/null 2>&1; then
-  alias ls='eza -F --color=auto --icons'
-  alias la='eza -aF --color=auto --icons'
-  alias ll='eza -hlF --git --color=auto --icons'
-  alias lla='eza -ahlF --git --color=auto --icons'
-  alias lld='eza -dhlF --color=auto --icons'
-  alias ll.='eza -dhlF --git --color=auto --icons .*'
-  alias lt='eza -F -TL 2 --color=auto --icons'
-  alias llt='eza -F -hlTL 2 --git --color=auto --icons'
+  alias ls='eza -F --color auto --icons auto'
+  alias la='eza -aF --color auto --icons auto'
+  alias ll='eza -hlF --git --color auto --icons auto'
+  alias lla='eza -ahlF --git --color auto --icons auto'
+  alias lld='eza -dhlF --color auto --icons auto'
+  alias ll.='eza -dhlF --git --color auto --icons auto .*'
+  alias lt='eza -F -TL 2 --color auto --icons auto'
+  alias llt='eza -F -hlTL 2 --git --color auto --icons auto'
 else
   case ${OSTYPE} in
     freebsd*|darwin*)
