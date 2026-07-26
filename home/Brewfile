@@ -141,6 +141,8 @@ brew "wget"
 brew "xvid"
 # Process YAML, JSON, XML, CSV and properties documents from the CLI
 brew "yq"
+# Shell extension to navigate your filesystem faster
+brew "zoxide"
 # UNIX shell (command interpreter)
 brew "zsh"
 # Git Worktree Manager for efficient worktree operations
