@@ -73,6 +73,8 @@ brew "vim"
 brew "webp"
 # Process YAML, JSON, XML, CSV and properties documents from the CLI
 brew "yq"
+# Shell extension to navigate your filesystem faster
+brew "zoxide"
 # Compression and file packaging/archive utility
 brew "zip"
 # Git Worktree Manager for efficient worktree operations
