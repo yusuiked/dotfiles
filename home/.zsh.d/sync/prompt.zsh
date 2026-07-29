@@ -3,6 +3,11 @@ if type starship > /dev/null 2>&1; then
   eval "$(starship init zsh)"
 fi
 
+# zoxide
+if type zoxide > /dev/null 2>&1; then
+  eval "$(zoxide init zsh)"
+fi
+
 # colorize default ls command
 # for OSX/BSD ls
 export CLICOLOR=1
