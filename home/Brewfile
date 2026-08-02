@@ -45,6 +45,8 @@ brew "jnv"
 brew "jq"
 # Fast and powerful Git hooks manager for any type of projects
 brew "lefthook"
+# TIFF library and utilities
+brew "libtiff"
 # Polyglot runtime manager (asdf rust clone)
 brew "mise"
 # Utility for managing network connections
@@ -69,8 +71,6 @@ brew "tig"
 brew "tmux"
 # Vi 'workalike' with many additional features
 brew "vim"
-# Image format providing lossless and lossy compression for web images
-brew "webp"
 # Process YAML, JSON, XML, CSV and properties documents from the CLI
 brew "yq"
 # Compression and file packaging/archive utility
