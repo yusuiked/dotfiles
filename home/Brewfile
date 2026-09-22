@@ -197,7 +197,7 @@ cask "itermbrowserplugin"
 # JetBrains tools manager
 cask "jetbrains-toolbox"
 # Menu bar manager
-cask "jordanbaird-ice"
+cask "jordanbaird-ice@beta"
 # Keyboard customiser
 cask "karabiner-elements"
 # Tool to control external monitor brightness & volume
