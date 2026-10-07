@@ -47,6 +47,8 @@ brew "jq"
 brew "lefthook"
 # TIFF library and utilities
 brew "libtiff"
+# Cryptography and SSL/TLS Toolkit
+brew "openssl@4"
 # Polyglot runtime manager (asdf rust clone)
 brew "mise"
 # Utility for managing network connections
