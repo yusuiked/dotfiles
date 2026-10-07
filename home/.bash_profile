@@ -11,3 +11,8 @@ fi
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+# The following lines were added by Docker Desktop to add commands to your PATH.
+export PATH="$PATH:/Users/yusuiked/.docker/bin"
+# End of Docker Desktop section.
+

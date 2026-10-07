@@ -27,6 +27,11 @@ esac
 fpath=($HOMEBREW_PREFIX/share/zsh/site-functions $fpath)
 manpath=($HOMEBREW_PREFIX/share/man $manpath)
 
+# Docker Desktop (Homebrew cask)
+if [[ -d $HOMEBREW_PREFIX/Caskroom/docker-desktop && -d $HOME/.docker/bin ]]; then
+  export PATH="$PATH:$HOME/.docker/bin"
+fi
+
 # homeshick
 if [[ -d $HOMEBREW_PREFIX/opt/homeshick ]]; then
   export HOMESHICK_DIR=$HOMEBREW_PREFIX/opt/homeshick
