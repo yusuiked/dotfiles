@@ -3,6 +3,8 @@ tap "d-kuro/tap", trusted: true
 brew "act"
 # GNU compiler collection
 brew "gcc"
+# Cryptography and SSL/TLS Toolkit
+brew "openssl@4"
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
 # Resource monitor. C++ version and continuation of bashtop and bpytop
@@ -47,8 +49,6 @@ brew "jq"
 brew "lefthook"
 # TIFF library and utilities
 brew "libtiff"
-# Cryptography and SSL/TLS Toolkit
-brew "openssl@4"
 # Polyglot runtime manager (asdf rust clone)
 brew "mise"
 # Utility for managing network connections
