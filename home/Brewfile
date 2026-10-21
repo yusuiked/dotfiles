@@ -14,6 +14,8 @@ brew "oniguruma"
 brew "bat"
 # Collection of portable C++ source libraries
 brew "boost"
+# Generic-purpose lossless compression algorithm by Google
+brew "brotli"
 # Resource monitor. C++ version and continuation of bashtop and bpytop
 brew "btop"
 # Core application library for C
