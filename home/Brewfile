@@ -12,12 +12,16 @@ brew "bash-completion"
 brew "oniguruma"
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
+# C/C++ and Java libraries for Unicode and globalization
+brew "icu4c@79"
 # Collection of portable C++ source libraries
 brew "boost"
 # Generic-purpose lossless compression algorithm by Google
 brew "brotli"
 # Resource monitor. C++ version and continuation of bashtop and bpytop
 brew "btop"
+# Perl compatible regular expressions library with a new API
+brew "pcre2"
 # Core application library for C
 brew "glib"
 # Statistics utility to count lines of code
@@ -26,6 +30,8 @@ brew "cloc"
 brew "coreutils"
 # Top-like interface for container metrics
 brew "ctop"
+# Get a file from an HTTP, HTTPS or FTP server
+brew "curl"
 # File comparison utilities
 brew "diffutils"
 # Load/unload environment variables based on $PWD
