@@ -1,6 +1,5 @@
 tap "buo/cask-upgrade", trusted: true
 tap "d-kuro/tap", trusted: true
-tap "vitorgalvao/tiny-scripts"
 # Run your GitHub Actions locally
 brew "act"
 # Display directories as trees (with optional color/HTML output)
@@ -23,6 +22,8 @@ brew "bat"
 brew "boost"
 # Resource monitor. C++ version and continuation of bashtop and bpytop
 brew "btop"
+# Perl compatible regular expressions library with a new API
+brew "pcre2"
 # Core application library for C
 brew "glib"
 # Statistics utility to count lines of code
@@ -103,10 +104,6 @@ brew "mise"
 brew "netcat"
 # Network Kanji code conversion Filter (NKF)
 brew "nkf"
-# Perl compatible regular expressions library
-brew "pcre"
-# CLI for Postgres with auto-completion and syntax highlighting
-brew "pgcli"
 # Modern replacement for ps written in Rust
 brew "procs"
 # Show ps output as a tree
