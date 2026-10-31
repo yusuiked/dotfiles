@@ -9,6 +9,8 @@ brew "openssl@4"
 brew "bat"
 # Resource monitor. C++ version and continuation of bashtop and bpytop
 brew "btop"
+# Perl compatible regular expressions library with a new API
+brew "pcre2"
 # Top-like interface for container metrics
 brew "ctop"
 # Load/unload environment variables based on $PWD
@@ -55,8 +57,6 @@ brew "mise"
 brew "netcat"
 # Network Kanji code conversion Filter (NKF)
 brew "nkf"
-# CLI for Postgres with auto-completion and syntax highlighting
-brew "pgcli"
 # Modern replacement for ps written in Rust
 brew "procs"
 # Rsync for cloud storage
