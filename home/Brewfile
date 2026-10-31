@@ -1,16 +1,16 @@
 tap "d-kuro/tap", trusted: true
-# Run your GitHub Actions locally
-brew "act"
 # GNU compiler collection
 brew "gcc"
+# Run your GitHub Actions locally
+brew "act"
 # Cryptography and SSL/TLS Toolkit
 brew "openssl@4"
+# Perl compatible regular expressions library with a new API
+brew "pcre2"
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
 # Resource monitor. C++ version and continuation of bashtop and bpytop
 brew "btop"
-# Perl compatible regular expressions library with a new API
-brew "pcre2"
 # Top-like interface for container metrics
 brew "ctop"
 # Load/unload environment variables based on $PWD
