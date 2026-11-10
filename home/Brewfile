@@ -138,8 +138,6 @@ brew "zoxide"
 brew "zsh"
 # Git Worktree Manager for efficient worktree operations
 brew "d-kuro/tap/gwq"
-# Command-line interface for 1Password
-cask "1password-cli"
 # Application uninstaller
 cask "appcleaner"
 # Terminal-based AI coding assistant
