@@ -104,8 +104,6 @@ brew "mise"
 brew "netcat"
 # Network Kanji code conversion Filter (NKF)
 brew "nkf"
-# Perl compatible regular expressions library
-brew "pcre"
 # Modern replacement for ps written in Rust
 brew "procs"
 # Show ps output as a tree
@@ -232,6 +230,4 @@ vscode "vscode-icons-team.vscode-icons"
 vscode "vscodevim.vim"
 vscode "zhuangtongfa.material-theme"
 vscode "ziyasal.vscode-open-in-github"
-go "cmd/go"
-go "cmd/gofmt"
 npm "corepack"
