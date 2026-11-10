@@ -81,6 +81,4 @@ brew "zip"
 brew "zoxide"
 # Git Worktree Manager for efficient worktree operations
 brew "d-kuro/tap/gwq"
-go "cmd/go"
-go "cmd/gofmt"
 npm "corepack"
