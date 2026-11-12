@@ -161,8 +161,6 @@ cask "font-udev-gothic-nf"
 cask "github"
 # Japanese input software
 cask "google-japanese-ime"
-# System monitoring app
-cask "istat-menus"
 # Terminal emulator as alternative to Apple's Terminal app
 cask "iterm2"
 # Enables an integrated web browser in iTerm2
